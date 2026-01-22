@@ -311,11 +311,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a42a9d4f73602f41bd1b514b93baa24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalInput: 0
-  verticalInput: 0
+  speedMultiplier: 1.5
   xSpeed: 5
   ySpeed: 3
-  spriteRenderer: {fileID: 1705064622}
+  spriteRenderer: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
