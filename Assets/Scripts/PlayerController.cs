@@ -5,67 +5,180 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     #region VARIABLES
-    // INPUTS
-    float horizontalInput; //almacena el valor del input horizontal (A y D, Flecha izda y Flecha Dcha)
-    float verticalInput; //almacena el valor del input vertical (W y S, Flecha arriba y Flecha abajo)
+    // Variables Float
+    [Header("Variables Float")]
+    public float xSpeed = 3;
+    float horizontalInput;
+    float xSpeedMultiplier;
+    public float jumpForce = 3;
+    public float _rbSpeed;
 
-    // VELOCIDADES
-    public float speedMultiplier = 1; //Valor por el que multiplicar la velocidad base del player al correr
-    public float xSpeed = 5; //Velocidad horizontal base del player.
-    public float ySpeed = 3; //Velocidad vertical base del player.
-    
-    // USO DE COMPONENTES
-    public SpriteRenderer spriteRenderer; //almacena el componente SpriteRenderer del player
+    // Variables Animator
+    [Header("Variables Animator")]
+    bool isAttacking = false;
+    bool isJumping;
+    bool isGrounded;
+    bool jPress;
+    bool jHold;
+    bool isCharge;
 
-    #endregion
+    //Variables de Componente
+    [Header("Variables de Componente")]
+    public SpriteRenderer spriteRenderer;
+    public Animator animator;
+    public Rigidbody2D rigidbodyPlayer;
 
-    private void Awake()
+    //Variables del Jump
+    [Header("Variables del Jump")]
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public float groundCheckRadius = 0.1f;
+
+    //Variables Compuestas
+    [Header("Variables compuestas")]
+    public Vector2 movement;
+    #endregion VARIABLES
+
+    void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>(); //Coge el spriteRenderer del player
+        rigidbodyPlayer = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        #region MOVEMENT
+        if (isAttacking == false)
+        {
+            // Movement
+            float horizontalInput = Input.GetAxisRaw("Horizontal"); //Guardamos en la variable horizontalInput si el user ha pulsado la flecha izda o dcha o mueve el joystick
+            movement = new Vector2(horizontalInput, 0f);
 
-        // SPRINT
+            FlipPlayer();//Corregimos la orientación del sprite
+        }
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (Input.GetButtonDown("Jump") && isGrounded == true && isAttacking == false)
+        {
+            rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            animator.SetBool("IsGrounded", false);
+        }
+
+        //Actualizamos la velocidad del Rigidbody cada frame
+        _rbSpeed = rigidbodyPlayer.velocity.magnitude;
+
+        /*
+        //Corregimos la orientación del sprite
+        FlipPlayer();
+        */
+
+        //Miramos si está atacando
+        AnimationTagCheck();
+
+        #region MOVEMENT MODIFIERS
+        //Nos aseguramos de que este pulsando o no el botón de correr
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            speedMultiplier = 1.5f;
+            xSpeedMultiplier = 1.5f;
         }
         else
         {
-            speedMultiplier = 1;
+            xSpeedMultiplier = 1.0f;
         }
 
-        // MOVIMIENTO BASICO
-
-        horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izda / Dcha
-        verticalInput = Input.GetAxisRaw("Vertical"); //Detecta cuando pulsas las flechas Arriba / Abajo
-
-        transform.Translate(Vector2.right * Time.deltaTime * xSpeed * speedMultiplier * horizontalInput); //Mueve al player horizontalmente segun el horizontalInput y a la velocidad de xSpeed, ademas de multiplicarlo por el valor de speedmultiplier para que corra
-        transform.Translate(Vector2.up * Time.deltaTime * ySpeed * speedMultiplier * verticalInput); //Mueve al player horizontalmente segun el verticalInput y a la velocidad de ySpeed, ademas de multiplicarlo por el valor de speedmultiplier para que corra
-
-        CharacterFlip(); //Voltea al player para que mire hacia la direccion en que se mueve     
-
-        #endregion MOVEMENT
-    }
+        //JAttack();
+        Pinch();
+        Jump();
 
 
-    private void CheckInputHorizontal() //almacena el valor del input horizontal
-    {
-        horizontalInput = Input.GetAxis("Horizontal");
-    }
+        #endregion
 
-    private void CharacterFlip() //Voltea al player para que mire hacia la direccion en que se mueve
-    {
-        if (horizontalInput < 0)
+        //Aplicamos el movimiento
+        #region MOVEMENT
+        if (isAttacking == false)
         {
-            spriteRenderer.flipX = true;
+            horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izquierda / Derecha
+
+            transform.Translate(Vector2.right * Time.deltaTime * xSpeed * xSpeedMultiplier * horizontalInput);
         }
-        else if (horizontalInput > 0.01)
+        #endregion
+
+        #region AnimatorBools
+        animator.SetBool("Idle", movement == Vector2.zero);
+        //animator.SetBool("Jump", isJumping);
+        animator.SetTrigger("Attack");
+        //animator.SetBool("Charge", isCharge);
+        animator.SetBool("PressKeyJ", jPress);
+        animator.SetBool("HoldKeyJ", jHold);
+        animator.SetFloat("PlayerSpeedX", xSpeed);
+        #endregion 
+    }
+
+    void FixedUpdate() //Metodo para hacer modificaciones en el rigid body del player
+    {
+        if (isAttacking == false)
+        {
+            float horizontalVelocity = movement.normalized.x * xSpeed * xSpeedMultiplier;
+            rigidbodyPlayer.velocity = new Vector2(horizontalVelocity, rigidbodyPlayer.velocity.y);
+        }
+    }
+
+    void LateUpdate() //Metodo para hacer modificaciones en el animator de objetos fisicos dinamicos
+    {
+
+    }
+
+    private void Pinch()
+    {
+        if (Input.GetKey(KeyCode.J) && isAttacking == false)
+        {
+            rigidbodyPlayer.AddForce(Vector2.right * horizontalInput * jumpForce, ForceMode2D.Impulse);
+            jPress = true;
+
+        }
+        else if (isAttacking)
+        {
+            jPress = false;
+            rigidbodyPlayer.velocity = new Vector2(0, 0);
+        }
+    }
+
+    private void FlipPlayer()
+    {
+        if (horizontalInput > 0.01)
         {
             spriteRenderer.flipX = false;
         }
+        else if (horizontalInput < -0.01)
+        {
+            spriteRenderer.flipX = true;
+        }
     }
+    private void Jump()
+    {
+        if (Input.GetKey(KeyCode.Space) && isGrounded == true)
+        {
+                rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+        else if (_rbSpeed == 0)
+        {
+            rigidbodyPlayer.gravityScale = 0f;
+            isJumping = false;
+        }
+    }
+
+    private void AnimationTagCheck()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            isAttacking = true;
+        }
+        else
+        {
+            isAttacking = false;
+        }
+    }
+
+
 }

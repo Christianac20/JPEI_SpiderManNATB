@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ed264830c849bcc43b0b915d02a17e8c
+guid: 813115cc0a7b6694eb4b728a825e279e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 15
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet idle_0
+      name: Spritesheet correr_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a7af2554b652245a17b00dabe3733f
+      internalID: 1073887878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet correr_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a634e8b043b34ae4293d6ddbd1191464
+      internalID: 504511297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet correr_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca69b4809b44a804b9db5211ccacee94
+      internalID: 1838087006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet correr_3
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf8eb71bf15bd4a40a5121a08022a1ef
-      internalID: 1678754595
+      spriteID: cebae6127171227459b47908357f55c6
+      internalID: 1902544097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle_1
+      name: Spritesheet correr_4
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69d62a5a15142694e93945d410901046
-      internalID: -1001773960
+      spriteID: 158ee8162da58014c9a1c238abf0d6d5
+      internalID: 503927977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle_2
+      name: Spritesheet correr_5
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2a0906212a2b924d835911b2ef841d3
-      internalID: -1790670164
+      spriteID: cfcd669547b7a4640ac4804bdc9d26b6
+      internalID: -754557099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle_3
+      name: Spritesheet correr_6
       rect:
         serializedVersion: 2
         x: 0
@@ -200,29 +263,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 436fb84bd602c7c4fb678c6da57e46eb
-      internalID: -1554421288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet idle_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 659267b117415a54e9697358698ef506
-      internalID: -1026105009
+      spriteID: 2eb5f5229f7cc4f4aa7c6f8992e36a07
+      internalID: 1456910976
       vertices: []
       indices: 
       edges: []
@@ -238,11 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spritesheet idle_0: 1678754595
-      Spritesheet idle_1: -1001773960
-      Spritesheet idle_2: -1790670164
-      Spritesheet idle_3: -1554421288
-      Spritesheet idle_4: -1026105009
+      Spritesheet correr_0: 1073887878
+      Spritesheet correr_1: 504511297
+      Spritesheet correr_2: 1838087006
+      Spritesheet correr_3: 1902544097
+      Spritesheet correr_4: 503927977
+      Spritesheet correr_5: -754557099
+      Spritesheet correr_6: 1456910976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
