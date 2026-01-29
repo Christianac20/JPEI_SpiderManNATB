@@ -50,15 +50,11 @@ public class PlayerController : MonoBehaviour
         //Miramos si está atacando
         AnimationTagCheck();
 
-        //Corregimos la orientación del sprite
+        //Corregimos la orientación del player
         FlipPlayer();
 
         // Is Jumping?
-        if (Input.GetButtonDown("Jump") && isGrounded == true && isAttacking == false)
-        {
-            rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            animator.SetBool("IsGrounded", false);
-        }
+        Jump();
 
         // MOVIMIENTO
         if (isAttacking == false)
@@ -96,7 +92,8 @@ public class PlayerController : MonoBehaviour
         #endregion 
     }
 
-    #region METODOS GENERALES
+    #region METODOS DE MOVIMIENTO
+    //Corregimos la orientación del player
     private void FlipPlayer()
     {
         if (horizontalInput > 0.01)
@@ -108,6 +105,17 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+
+    // Is Jumping?
+    private void Jump()
+    {
+        if (Input.GetButtonDown("Jump") && isGrounded == true && isAttacking == false)
+        {
+            rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            animator.SetBool("IsGrounded", false);
+        }
+    }
+
     private void AnimationTagCheck()
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))

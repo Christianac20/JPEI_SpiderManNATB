@@ -708,7 +708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xSpeed: 4
-  jumpForce: 10
+  jumpForce: 15
   rigidbodySpeed: 0
   spriteRenderer: {fileID: 1705064622}
   animator: {fileID: 1705064627}
@@ -729,7 +729,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0.1
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: dee99a9ea44005e4488466cccd629fc7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
