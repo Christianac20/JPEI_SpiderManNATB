@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class PlayerController : MonoBehaviour
 {
@@ -11,28 +14,22 @@ public class PlayerController : MonoBehaviour
     float horizontalInput;
     float xSpeedMultiplier;
     public float jumpForce = 3;
-    public float _rbSpeed;
+    public float rigidbodySpeed;
 
     // Variables Animator
     [Header("Variables Animator")]
-    bool isAttacking = false;
-    bool isJumping;
+    bool isAttacking;
     bool isGrounded;
+    bool isRunning;
+    bool isJumping;
     bool jPress;
-    bool jHold;
-    bool isCharge;
+    //bool jHold;
 
     //Variables de Componente
     [Header("Variables de Componente")]
     public SpriteRenderer spriteRenderer;
     public Animator animator;
     public Rigidbody2D rigidbodyPlayer;
-
-    //Variables del Jump
-    [Header("Variables del Jump")]
-    public Transform groundCheck;
-    public LayerMask groundLayer;
-    public float groundCheckRadius = 0.1f;
 
     //Variables Compuestas
     [Header("Variables compuestas")]
@@ -48,6 +45,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        #region MOVEMENT
+        //Actualizamos la velocidad del Rigidbody cada frame
+        rigidbodySpeed = rigidbodyPlayer.velocity.magnitude;
+
         if (isAttacking == false)
         {
             // Movement
@@ -57,42 +58,30 @@ public class PlayerController : MonoBehaviour
             FlipPlayer();//Corregimos la orientación del sprite
         }
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
-
+        // Is Jumping?
         if (Input.GetButtonDown("Jump") && isGrounded == true && isAttacking == false)
         {
             rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("IsGrounded", false);
         }
-
-        //Actualizamos la velocidad del Rigidbody cada frame
-        _rbSpeed = rigidbodyPlayer.velocity.magnitude;
-
-        /*
-        //Corregimos la orientación del sprite
-        FlipPlayer();
-        */
-
-        //Miramos si está atacando
-        AnimationTagCheck();
+        #endregion
 
         #region MOVEMENT MODIFIERS
         //Nos aseguramos de que este pulsando o no el botón de correr
         if (Input.GetKey(KeyCode.LeftShift))
         {
             xSpeedMultiplier = 1.5f;
+            isRunning = true;
         }
         else
         {
             xSpeedMultiplier = 1.0f;
+            isRunning = false;
         }
-
-        //JAttack();
-        Pinch();
-        Jump();
-
-
         #endregion
+
+        //Miramos si está atacando
+        AnimationTagCheck();
 
         //Aplicamos el movimiento
         #region MOVEMENT
@@ -104,46 +93,19 @@ public class PlayerController : MonoBehaviour
         }
         #endregion
 
-        #region AnimatorBools
+        #region ANIMATOR VARIABLES SET
         animator.SetBool("Idle", movement == Vector2.zero);
+        animator.SetBool("IsGrounded", isGrounded);
+        animator.SetBool("IsRunning", isRunning);
         //animator.SetBool("Jump", isJumping);
-        animator.SetTrigger("Attack");
+        //animator.SetTrigger("Attack");
         //animator.SetBool("Charge", isCharge);
-        animator.SetBool("PressKeyJ", jPress);
-        animator.SetBool("HoldKeyJ", jHold);
-        animator.SetFloat("PlayerSpeedX", xSpeed);
+        //animator.SetBool("PressKeyJ", jPress);
+        //animator.SetBool("HoldKeyJ", jHold);
         #endregion 
     }
 
-    void FixedUpdate() //Metodo para hacer modificaciones en el rigid body del player
-    {
-        if (isAttacking == false)
-        {
-            float horizontalVelocity = movement.normalized.x * xSpeed * xSpeedMultiplier;
-            rigidbodyPlayer.velocity = new Vector2(horizontalVelocity, rigidbodyPlayer.velocity.y);
-        }
-    }
-
-    void LateUpdate() //Metodo para hacer modificaciones en el animator de objetos fisicos dinamicos
-    {
-
-    }
-
-    private void Pinch()
-    {
-        if (Input.GetKey(KeyCode.J) && isAttacking == false)
-        {
-            rigidbodyPlayer.AddForce(Vector2.right * horizontalInput * jumpForce, ForceMode2D.Impulse);
-            jPress = true;
-
-        }
-        else if (isAttacking)
-        {
-            jPress = false;
-            rigidbodyPlayer.velocity = new Vector2(0, 0);
-        }
-    }
-
+    #region METODOS GENERALES
     private void FlipPlayer()
     {
         if (horizontalInput > 0.01)
@@ -155,18 +117,26 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
-    private void Jump()
+    #endregion
+
+    #region ISGROUNDED CHECKING
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Input.GetKey(KeyCode.Space) && isGrounded == true)
+        //movementScript.isGrounded = true;
+        if (collision.gameObject.tag == ("Ground"))
         {
-                rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-        }
-        else if (_rbSpeed == 0)
-        {
-            rigidbodyPlayer.gravityScale = 0f;
-            isJumping = false;
+            isGrounded = true;
         }
     }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == ("Ground"))
+        {
+            isGrounded = false;
+        }
+    }
+    #endregion
 
     private void AnimationTagCheck()
     {
@@ -179,6 +149,4 @@ public class PlayerController : MonoBehaviour
             isAttacking = false;
         }
     }
-
-
 }
