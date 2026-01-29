@@ -24,15 +24,15 @@ public class VolumeIconChanger : MonoBehaviour
 
     public void UpdateIcon(float value)
     {
-        if (value <= 0)
+        if (value <= -79)
         {
             iconImage.sprite = muteSprite;
         }
-        else if (value < -33f)
+        else if (value < -40f)
         {
             iconImage.sprite = lowSprite;
         }
-        else if (value < -66f)
+        else if (value < -15f)
         {
             iconImage.sprite = mediumSprite;
         }
