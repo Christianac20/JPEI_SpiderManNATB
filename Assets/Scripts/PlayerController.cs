@@ -34,9 +34,9 @@ public class PlayerController : MonoBehaviour
     //Variables Compuestas
     [Header("Variables compuestas")]
     public Vector2 movement;
-    #endregion VARIABLES
+    #endregion
 
-    void Awake()
+    void Awake() //Lo uso para guardar componentes al iniciar
     {
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -46,17 +46,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         #region MOVEMENT
-        //Actualizamos la velocidad del Rigidbody cada frame
-        rigidbodySpeed = rigidbodyPlayer.velocity.magnitude;
 
-        if (isAttacking == false)
-        {
-            // Movement
-            float horizontalInput = Input.GetAxisRaw("Horizontal"); //Guardamos en la variable horizontalInput si el user ha pulsado la flecha izda o dcha o mueve el joystick
-            movement = new Vector2(horizontalInput, 0f);
+        //Miramos si está atacando
+        AnimationTagCheck();
 
-            FlipPlayer();//Corregimos la orientación del sprite
-        }
+        //Corregimos la orientación del sprite
+        FlipPlayer();
 
         // Is Jumping?
         if (Input.GetButtonDown("Jump") && isGrounded == true && isAttacking == false)
@@ -64,9 +59,16 @@ public class PlayerController : MonoBehaviour
             rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("IsGrounded", false);
         }
-        #endregion
 
-        #region MOVEMENT MODIFIERS
+        // MOVIMIENTO
+        if (isAttacking == false)
+        {
+            horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izquierda / Derecha
+            transform.Translate(Vector2.right * Time.deltaTime * xSpeed * xSpeedMultiplier * horizontalInput);
+            movement = new Vector2(horizontalInput, 0f);
+        }
+
+        #region SPRINTING
         //Nos aseguramos de que este pulsando o no el botón de correr
         if (Input.GetKey(KeyCode.LeftShift))
         {
@@ -80,17 +82,6 @@ public class PlayerController : MonoBehaviour
         }
         #endregion
 
-        //Miramos si está atacando
-        AnimationTagCheck();
-
-        //Aplicamos el movimiento
-        #region MOVEMENT
-        if (isAttacking == false)
-        {
-            horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izquierda / Derecha
-
-            transform.Translate(Vector2.right * Time.deltaTime * xSpeed * xSpeedMultiplier * horizontalInput);
-        }
         #endregion
 
         #region ANIMATOR VARIABLES SET
@@ -117,6 +108,17 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = true;
         }
     }
+    private void AnimationTagCheck()
+    {
+        if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            isAttacking = true;
+        }
+        else
+        {
+            isAttacking = false;
+        }
+    }
     #endregion
 
     #region ISGROUNDED CHECKING
@@ -137,16 +139,5 @@ public class PlayerController : MonoBehaviour
         }
     }
     #endregion
-
-    private void AnimationTagCheck()
-    {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-        {
-            isAttacking = true;
-        }
-        else
-        {
-            isAttacking = false;
-        }
-    }
+    
 }
