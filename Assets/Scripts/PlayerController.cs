@@ -20,8 +20,6 @@ public class PlayerController : MonoBehaviour
     bool isAttacking;
     bool isGrounded;
     bool isRunning;
-    bool isJumping;
-    //bool jHold;
 
     //Variables de Componente
     [Header("Variables de Componente")]
@@ -34,7 +32,7 @@ public class PlayerController : MonoBehaviour
     public Vector2 movement;
     #endregion
 
-    void Awake() //Lo uso para guardar componentes al iniciar
+    void Awake() //Usado para guardar componentes al iniciar
     {
         #region GUARDAR REFERENCIAS
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
@@ -136,7 +134,15 @@ public class PlayerController : MonoBehaviour
     // Ataque del puño purificador. Cambio en las tecas respecto al plan iniciar de mantener las del Punch
     private void MegaPunch()
     {
+        /* MegaPunch SIN INPUT MANAGER
         if (isGrounded && (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.P))) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackMegaPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+        */
+
+        // Con el input manager para atacar MegaPunch
+        if (isGrounded && Input.GetButtonDown("Mega Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackMegaPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
         }
@@ -145,7 +151,15 @@ public class PlayerController : MonoBehaviour
     // Ataque basico de puñetazo
     private void Punch()
     {
+        /* Punch SIN INPUT MANAGER
         if (isGrounded && (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+        */
+
+        // Con el input manager para atacar Punch
+        if (isGrounded && Input.GetButtonDown("Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
         }
@@ -154,7 +168,15 @@ public class PlayerController : MonoBehaviour
     // Ataque basico de patada
     private void Kick()
     {
+        /* Kick SIN INPUT MANAGER
         if (isGrounded && (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X))) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackKick"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+        */
+
+        // Con el input manager para atacar Kick
+        if (isGrounded && Input.GetButtonDown("Kick")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackKick"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
         }
@@ -163,12 +185,19 @@ public class PlayerController : MonoBehaviour
     // Ataque basico de disparo de telaraña
     private void ShootWeb()
     {
+        /* ShootWeb SIN INPUT MANAGER
         if (isGrounded && (Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C))) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackShootWeb"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
         }
-    }
+        */
 
+        // Con el input manager para atacar ShootWeb
+        if (isGrounded && Input.GetButtonDown("Shoot Web")) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackShootWeb"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+    }
     #endregion
 
     #region ISGROUNDED CHECKING
