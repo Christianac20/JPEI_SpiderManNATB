@@ -10,19 +10,17 @@ public class PlayerController : MonoBehaviour
     #region VARIABLES
     // Variables Float
     [Header("Variables Float")]
-    public float xSpeed = 3;
     float horizontalInput;
-    float xSpeedMultiplier;
+    public float xSpeedMultiplier = 1.0f;
+    public float xSpeed = 3;
     public float jumpForce = 3;
-    public float rigidbodySpeed;
 
     // Variables Animator
-    [Header("Variables Animator")]
+    [Header("Variables del Animator")]
     bool isAttacking;
     bool isGrounded;
     bool isRunning;
     bool isJumping;
-    bool jPress;
     //bool jHold;
 
     //Variables de Componente
@@ -38,25 +36,17 @@ public class PlayerController : MonoBehaviour
 
     void Awake() //Lo uso para guardar componentes al iniciar
     {
+        #region GUARDAR REFERENCIAS
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        #endregion
     }
 
     void Update()
     {
         #region MOVEMENT
-
-        //Miramos si está atacando
-        AnimationTagCheck();
-
-        //Corregimos la orientación del player
-        FlipPlayer();
-
-        // Is Jumping?
-        Jump();
-
-        // MOVIMIENTO
+        // Movimiento lateral basico
         if (isAttacking == false)
         {
             horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izquierda / Derecha
@@ -64,35 +54,31 @@ public class PlayerController : MonoBehaviour
             movement = new Vector2(horizontalInput, 0f);
         }
 
-        #region SPRINTING
-        //Nos aseguramos de que este pulsando o no el botón de correr
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            xSpeedMultiplier = 1.5f;
-            isRunning = true;
-        }
-        else
-        {
-            xSpeedMultiplier = 1.0f;
-            isRunning = false;
-        }
+        // Llamo a las funciones modificadoras del movimiento
+        AnimationTagCheck();
+        FlipPlayer();
+        Jump();
+        Run();
         #endregion
 
+        #region ATAQUES
+        // Llamo a las funciones de ataque
+        Punch();
+        Kick();
+        MegaPunch();
+        ShootWeb();
         #endregion
 
         #region ANIMATOR VARIABLES SET
+        // Asigno variables a parametros del animator
         animator.SetBool("Idle", movement == Vector2.zero);
         animator.SetBool("IsGrounded", isGrounded);
         animator.SetBool("IsRunning", isRunning);
-        //animator.SetBool("Jump", isJumping);
-        //animator.SetTrigger("Attack");
-        //animator.SetBool("Charge", isCharge);
-        //animator.SetBool("PressKeyJ", jPress);
-        //animator.SetBool("HoldKeyJ", jHold);
         #endregion 
     }
 
-    #region METODOS DE MOVIMIENTO
+    #region METODOS MODIFICADORES DEL MOVIMIENTO
+
     //Corregimos la orientación del player
     private void FlipPlayer()
     {
@@ -116,6 +102,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Nos aseguramos de que este pulsando o no el botón de correr
+    private void Run()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            xSpeedMultiplier = 2f;
+            isRunning = true;
+        }
+        else
+        {
+            xSpeedMultiplier = 1.0f;
+            isRunning = false;
+        }
+    }
+    
+    // Comprobacion de si está atacando
     private void AnimationTagCheck()
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
@@ -127,6 +129,46 @@ public class PlayerController : MonoBehaviour
             isAttacking = false;
         }
     }
+
+    #endregion
+
+    #region METODOS DE ATAQUES
+    // Ataque del puño purificador. Cambio en las tecas respecto al plan iniciar de mantener las del Punch
+    private void MegaPunch()
+    {
+        if (isGrounded && (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.P))) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackMegaPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+    }
+
+    // Ataque basico de puñetazo
+    private void Punch()
+    {
+        if (isGrounded && (Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.Z))) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+    }
+
+    // Ataque basico de patada
+    private void Kick()
+    {
+        if (isGrounded && (Input.GetKeyDown(KeyCode.K) || Input.GetKeyDown(KeyCode.X))) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackKick"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+    }
+
+    // Ataque basico de disparo de telaraña
+    private void ShootWeb()
+    {
+        if (isGrounded && (Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.C))) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        {
+            animator.SetTrigger("AttackShootWeb"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+        }
+    }
+
     #endregion
 
     #region ISGROUNDED CHECKING
