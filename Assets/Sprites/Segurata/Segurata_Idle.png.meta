@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet idle-Recovered_0
+      name: Segurata_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee1df5663c320b64e9ec0527ba42f005
-      internalID: 681402024
+      spriteID: 59021770ccd98a04c96c7b7c83b5019b
+      internalID: -1995336615
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle-Recovered_1
+      name: Segurata_Idle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c7ec00ba8ecaeb54fa2cb1757f133ac3
-      internalID: -953131320
+      spriteID: a1cc114ff56d41446a10d22b565d9aaa
+      internalID: 2055882150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle-Recovered_2
+      name: Segurata_Idle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10786da4c1ea4a74d8e5b21e4b0a0162
-      internalID: 1600176292
+      spriteID: 9b7365bb4d4a08c4f90aec5baa72aae4
+      internalID: -276284336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle-Recovered_3
+      name: Segurata_Idle_3
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 886f44057c4ce2d428c216ab035b2357
-      internalID: -80133283
+      spriteID: dc67a2acfd7782447ae01193c03ca42c
+      internalID: 823824585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle-Recovered_4
+      name: Segurata_Idle_4
       rect:
         serializedVersion: 2
         x: 64
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fc1ea1645f1b0945a4dc281523383e8
-      internalID: -81332389
+      spriteID: 610623b3c3195424eaafa6c5ab3b9210
+      internalID: -1566994498
       vertices: []
       indices: 
       edges: []
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spritesheet idle-Recovered_0: 681402024
-      Spritesheet idle-Recovered_1: -953131320
-      Spritesheet idle-Recovered_2: 1600176292
-      Spritesheet idle-Recovered_3: -80133283
-      Spritesheet idle-Recovered_4: -81332389
+      Segurata_Idle_0: -1995336615
+      Segurata_Idle_1: 2055882150
+      Segurata_Idle_2: -276284336
+      Segurata_Idle_3: 823824585
+      Segurata_Idle_4: -1566994498
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

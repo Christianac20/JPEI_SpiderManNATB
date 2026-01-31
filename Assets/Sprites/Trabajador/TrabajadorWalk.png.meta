@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 203eaefa1e0f4fe40b2f1833b0d403cd
+guid: e7293236bdd21a54cbd11bcb15811140
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet idle_0
+      name: TrabajadorWalk_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 876ead10f6aee4e4eb29fe95f17fe72a
-      internalID: -1969953490
+      spriteID: 70977c98f61582c4d8dd15f2a428c962
+      internalID: 339944543
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle_1
+      name: TrabajadorWalk_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8309af08a1aa04440bfc96035b0c1dcc
-      internalID: 1656864727
+      spriteID: b03435521e0ee984bb53c5e4b9a766db
+      internalID: -809336110
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle_2
+      name: TrabajadorWalk_2
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef07a0feccbc5bb4db0bab1dd8a7c204
-      internalID: -334164194
+      spriteID: e6c3da7b67894b648845e20a364ca7f1
+      internalID: 782912683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle_3
+      name: TrabajadorWalk_3
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68ee7f55ff62d37488b7a06d5fd9c47b
-      internalID: -256247932
+      spriteID: 66c48eb5e6f00f647a1ff9537f4972bf
+      internalID: -1803988020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet idle_4
+      name: TrabajadorWalk_4
       rect:
         serializedVersion: 2
         x: 64
@@ -221,8 +221,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 250605aab6a2f9c41b6aeb7a35d273f7
-      internalID: 290404895
+      spriteID: 32720f33288dea0488e32c5035683142
+      internalID: 1827759014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TrabajadorWalk_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2133a0eb323d7374488bcde0d701e983
+      internalID: -786684032
       vertices: []
       indices: 
       edges: []
@@ -238,11 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spritesheet idle_0: -1969953490
-      Spritesheet idle_1: 1656864727
-      Spritesheet idle_2: -334164194
-      Spritesheet idle_3: -256247932
-      Spritesheet idle_4: 290404895
+      TrabajadorWalk_0: 339944543
+      TrabajadorWalk_1: -809336110
+      TrabajadorWalk_2: 782912683
+      TrabajadorWalk_3: -1803988020
+      TrabajadorWalk_4: 1827759014
+      TrabajadorWalk_5: -786684032
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7293236bdd21a54cbd11bcb15811140
+guid: 23af4d8a903aca340a34dcee5668262f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,70 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet caminar_0
+      name: Segurata_GranadaExplosion_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825a9a63de5d3d24bad65a22aed34719
+      internalID: 684442600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Segurata_GranadaExplosion_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ec14abee0619a49a45f37243d8c309
+      internalID: 2142903031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Segurata_GranadaExplosion_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02cb07909967c4246a31d14efbff9549
+      internalID: -741265960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Segurata_GranadaExplosion_3
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dd986510f2028846a6ef4ad4916356f
-      internalID: 616226167
+      spriteID: 0417d59552579f841bbc8b2b4e2a7907
+      internalID: 786015284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_1
+      name: Segurata_GranadaExplosion_4
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +221,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7210a444f80492445871c7b24848a83c
-      internalID: -1311084439
+      spriteID: 21563158706e0a5438cc8c678fe8c149
+      internalID: 1629845114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_2
+      name: Segurata_GranadaExplosion_5
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96486030d819b264a86a49a6f055f4e9
-      internalID: -964432571
+      spriteID: 7c1de69f3e07fc44aafbfac2eb05abb6
+      internalID: -990126924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_3
+      name: Segurata_GranadaExplosion_6
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +263,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bc20a716de8eca4384d95530101db86
-      internalID: -234610783
+      spriteID: 8d27d9350de70e04b8db7529e92d63bd
+      internalID: -402638151
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_4
+      name: Segurata_GranadaExplosion_7
       rect:
         serializedVersion: 2
         x: 64
@@ -221,29 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1954456e86fc4c94eade5ecb1b6e0c46
-      internalID: 901099938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet caminar_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7b834e80894f2f41a1132fc4e54e8f3
-      internalID: -223114738
+      spriteID: a6e769b493c98b144b363b4352e86a6e
+      internalID: 834551562
       vertices: []
       indices: 
       edges: []
@@ -259,12 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spritesheet caminar_0: 616226167
-      Spritesheet caminar_1: -1311084439
-      Spritesheet caminar_2: -964432571
-      Spritesheet caminar_3: -234610783
-      Spritesheet caminar_4: 901099938
-      Spritesheet caminar_5: -223114738
+      Segurata_GranadaExplosion_0: 684442600
+      Segurata_GranadaExplosion_1: 2142903031
+      Segurata_GranadaExplosion_2: -741265960
+      Segurata_GranadaExplosion_3: 786015284
+      Segurata_GranadaExplosion_4: 1629845114
+      Segurata_GranadaExplosion_5: -990126924
+      Segurata_GranadaExplosion_6: -402638151
+      Segurata_GranadaExplosion_7: 834551562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

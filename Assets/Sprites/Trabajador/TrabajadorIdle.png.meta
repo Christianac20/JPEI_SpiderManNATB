@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ab4c601eaf5f6e4091f670a09935225
+guid: 203eaefa1e0f4fe40b2f1833b0d403cd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Spritesheet caminar_0
+      name: TrabajadorIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54fab4a8e2916c74d86a599d2c6ea096
-      internalID: -92545708
+      spriteID: 3c9346bc4b94f814186c06a62b96b76e
+      internalID: -952384372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_1
+      name: TrabajadorIdle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9cb30aee72789e49830b8b600f5c102
-      internalID: 1973075796
+      spriteID: c72ee12315219a74aa61472e2cc10be7
+      internalID: 779822709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_2
+      name: TrabajadorIdle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ce48b06d4bda8045b2d317925385d94
-      internalID: -137766590
+      spriteID: 525863be0c681aa4e83015ba3cebbbd5
+      internalID: -260310396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_3
+      name: TrabajadorIdle_3
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +200,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04d65977ae0a2944b993f350ebb4bd5d
-      internalID: -2140757541
+      spriteID: 3c410e835d068c543ba53be4ad7f7c4d
+      internalID: 1144833343
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spritesheet caminar_4
+      name: TrabajadorIdle_4
       rect:
         serializedVersion: 2
         x: 64
@@ -221,29 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3961c49ae3858f541a8259d5e3d3e77a
-      internalID: -2004345286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Spritesheet caminar_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90e2411111ae04848a05ecae1262cd6a
-      internalID: 841878829
+      spriteID: 9416e19f9231755498d9eefbca85ec9d
+      internalID: 2056421517
       vertices: []
       indices: 
       edges: []
@@ -259,12 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Spritesheet caminar_0: -92545708
-      Spritesheet caminar_1: 1973075796
-      Spritesheet caminar_2: -137766590
-      Spritesheet caminar_3: -2140757541
-      Spritesheet caminar_4: -2004345286
-      Spritesheet caminar_5: 841878829
+      TrabajadorIdle_0: -952384372
+      TrabajadorIdle_1: 779822709
+      TrabajadorIdle_2: -260310396
+      TrabajadorIdle_3: 1144833343
+      TrabajadorIdle_4: 2056421517
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

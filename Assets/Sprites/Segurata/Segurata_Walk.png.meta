@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d5f7756d6a2741d41ba87ae1ec65cff9
+guid: 3ab4c601eaf5f6e4091f670a09935225
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,70 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Punch 2_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 84b4655e8dc594947824ee044b23719d
-      internalID: -1715747585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Punch 2_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1573da0f8365ec14fbc6235e1cb9d91d
-      internalID: 970652935
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Punch 2_2
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 128
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 554ddb9be311406499040af0d801fb8e
-      internalID: 1868347775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Punch 2_3
+      name: Spritesheet caminar_0
       rect:
         serializedVersion: 2
         x: 0
@@ -200,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8e4d18d5d6dce249897e8fef9676432
-      internalID: 1943267475
+      spriteID: 54fab4a8e2916c74d86a599d2c6ea096
+      internalID: -92545708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Punch 2_4
+      name: Spritesheet caminar_1
       rect:
         serializedVersion: 2
         x: 64
@@ -221,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d232f84545340c1469c70d3fb4b171a4
-      internalID: -1279103000
+      spriteID: b9cb30aee72789e49830b8b600f5c102
+      internalID: 1973075796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Punch 2_5
+      name: Spritesheet caminar_2
       rect:
         serializedVersion: 2
         x: 128
@@ -242,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 784b184ea9a3faf4c88e582289037e3d
-      internalID: 815729109
+      spriteID: 4ce48b06d4bda8045b2d317925385d94
+      internalID: -137766590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Punch 2_6
+      name: Spritesheet caminar_3
       rect:
         serializedVersion: 2
         x: 0
@@ -263,8 +200,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8efae2b63f693ed438501d2c9b787ffa
-      internalID: 1952851829
+      spriteID: 04d65977ae0a2944b993f350ebb4bd5d
+      internalID: -2140757541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet caminar_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3961c49ae3858f541a8259d5e3d3e77a
+      internalID: -2004345286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheet caminar_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e2411111ae04848a05ecae1262cd6a
+      internalID: 841878829
       vertices: []
       indices: 
       edges: []
@@ -280,13 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Punch 2_0: -1715747585
-      Punch 2_1: 970652935
-      Punch 2_2: 1868347775
-      Punch 2_3: 1943267475
-      Punch 2_4: -1279103000
-      Punch 2_5: 815729109
-      Punch 2_6: 1952851829
+      Spritesheet caminar_0: -92545708
+      Spritesheet caminar_1: 1973075796
+      Spritesheet caminar_2: -137766590
+      Spritesheet caminar_3: -2140757541
+      Spritesheet caminar_4: -2004345286
+      Spritesheet caminar_5: 841878829
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
