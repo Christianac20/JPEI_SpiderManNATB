@@ -30,6 +30,10 @@ public class PlayerController : MonoBehaviour
     //Variables Compuestas
     [Header("Variables compuestas")]
     Vector2 movement;
+
+    //Manejo de audio
+    AudioManger audioManager;
+
     #endregion
 
     void Awake() //Usado para guardar componentes al iniciar
@@ -38,6 +42,7 @@ public class PlayerController : MonoBehaviour
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManger>(); //Pillar audio source del gameObject
         #endregion
     }
 
@@ -97,6 +102,7 @@ public class PlayerController : MonoBehaviour
         {
             rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("IsGrounded", false);
+            audioManager.PlaySFX(audioManager.Jump_01);
         }
     }
 
@@ -145,6 +151,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("Mega Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackMegaPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.Purificator_01);
         }
     }
 
@@ -162,6 +169,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.Punch_01);
         }
     }
 
@@ -179,6 +187,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("Kick")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackKick"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.Kick_01);
         }
     }
 
@@ -196,6 +205,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("Shoot Web")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
             animator.SetTrigger("AttackShootWeb"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.WebShoot_01);
         }
     }
     #endregion
