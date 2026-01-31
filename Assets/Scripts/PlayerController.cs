@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
     //Variables Compuestas
     [Header("Variables compuestas")]
-    public Vector2 movement;
+    Vector2 movement;
     #endregion
 
     void Awake() //Usado para guardar componentes al iniciar
@@ -204,7 +204,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //movementScript.isGrounded = true;
-        if (collision.gameObject.tag == ("Ground"))
+        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
         {
             isGrounded = true;
         }
@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Ground"))
+        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
         {
             isGrounded = false;
         }
