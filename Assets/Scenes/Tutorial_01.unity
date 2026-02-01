@@ -2672,7 +2672,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -1635047268, guid: ec988b508d7463d4fa7bf73025fef10b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3903,43 +3903,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911506615}
   m_CullTransparentMesh: 1
---- !u!1 &931835640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 958927802624286156, guid: 4215a6353e3277e43934f357d809139f, type: 3}
+--- !u!114 &931835643 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9182399692998331167, guid: 4215a6353e3277e43934f357d809139f, type: 3}
   m_PrefabInstance: {fileID: 1086794265}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &931835641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931835640}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7832066a532c77e40a644af58b9773ff, type: 3}
+  m_Script: {fileID: 11500000, guid: e882f37ea580c7341abf9327f83894d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 6
-  OnHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  OnPlayerDeath:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &931835642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931835640}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bbb046400963d418870e8c907ade2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 931835641}
 --- !u!1 &955122602
 GameObject:
   m_ObjectHideFlags: 0
@@ -4965,20 +4939,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5933802865562324624, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      propertyPath: m_BodyType
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 958927802624286156, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 931835641}
-    - targetCorrespondingSourceObject: {fileID: 958927802624286156, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 931835642}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4215a6353e3277e43934f357d809139f, type: 3}
 --- !u!1 &1177036769
 GameObject:
@@ -6673,7 +6637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27079c1a2100e648b672d3f478c8c7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 931835641}
+  playerHealth: {fileID: 931835643}
   healthBarImage: {fileID: 1016043986}
   healthSprites:
   - {fileID: -2142558234, guid: 00e415ad32a47be48829f0efdaf2171b, type: 3}

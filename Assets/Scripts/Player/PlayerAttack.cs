@@ -11,7 +11,7 @@ public class PlayerAttack : MonoBehaviour
     EnemyHealth enemyHealth;
 
     //Manejo de audio
-    AudioManger audioManager;
+    public AudioManger audioManager;
 
     private void Awake()
     {

@@ -3,7 +3,16 @@ guid: d841b0fe8fc540f43a693ef00bc1d93c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SFXSource: {instanceID: 0}
+  - Hurt_01: {fileID: 8300000, guid: ba33510482539464496b1d425c99b154, type: 3}
+  - Jump_01: {fileID: 8300000, guid: b05fe57b4774592438ff7d644840bc52, type: 3}
+  - Jump_02: {fileID: 8300000, guid: 20a334dcb4d38064392d1c4bd7817169, type: 3}
+  - Pickup_01: {fileID: 8300000, guid: 7759950c354bfbe4f945159407d30bb6, type: 3}
+  - Punch_01: {fileID: 8300000, guid: f5ea01d47120f16428c560146e504e47, type: 3}
+  - Kick_01: {fileID: 8300000, guid: 98c968c9cf33762478e6e244ee2d06d5, type: 3}
+  - Purificator_01: {fileID: 8300000, guid: 552b6f93b358bd9419927e66b8dfe842, type: 3}
+  - WebShoot_01: {fileID: 8300000, guid: 5f35ff2d31e42b5409e65ba9f600f0c0, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

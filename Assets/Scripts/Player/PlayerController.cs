@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
 
     //Manejo de audio
-    AudioManger audioManager;
+    public AudioManger audioManager;
     #endregion
 
     void Awake() //Usado para guardar componentes al iniciar
