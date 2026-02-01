@@ -11,12 +11,11 @@ public class PlayerAttack : MonoBehaviour
     EnemyHealth enemyHealth;
 
     //Manejo de audio
-    public AudioManger audioManager;
+    public AudioManager audioManager;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManger>(); //Pillar audio source del gameObject
     }
 
     private void Update()

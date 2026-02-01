@@ -11,6 +11,9 @@ public class PlayerHealth : MonoBehaviour
     public UnityEvent<int> OnHealthChanged; // Evento para actualizar UI
     public UnityEvent OnPlayerDeath;
     public Animator animator;
+    public AudioManager audioManager;
+    public PlayerController playerController;
+    public PlayerAttack playerAttack;
 
     private void Awake()
     {
@@ -27,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        audioManager.PlaySFX(audioManager.Hurt_01);
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
 
         OnHealthChanged?.Invoke(currentHealth);
@@ -51,6 +55,8 @@ public class PlayerHealth : MonoBehaviour
         OnPlayerDeath?.Invoke();
         animator.SetTrigger("Death");
         Debug.Log("El jugador ha muerto");
+        playerController.enabled = false;
+        playerAttack.enabled = false;
     }
 
     // Getters

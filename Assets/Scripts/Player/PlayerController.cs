@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     Vector2 movement;
 
     //Manejo de audio
-    public AudioManger audioManager;
+    public AudioManager audioManager;
     #endregion
 
     void Awake() //Usado para guardar componentes al iniciar
@@ -42,7 +42,6 @@ public class PlayerController : MonoBehaviour
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
-        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManger>(); //Pillar audio source del gameObject
         #endregion
     }
 

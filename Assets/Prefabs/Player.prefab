@@ -270,6 +270,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5765957712652564684}
   animator: {fileID: 5350304032071115773}
   rigidbodyPlayer: {fileID: 5933802865562324624}
+  audioManager: {fileID: 0}
 --- !u!114 &2245749154834590195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,6 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageDone: 0
   animator: {fileID: 5350304032071115773}
+  audioManager: {fileID: 0}
 --- !u!114 &9182399692998331167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,13 +299,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 6
-  totalHealth: 3
+  currentHealth: 0
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
   OnPlayerDeath:
     m_PersistentCalls:
       m_Calls: []
+  animator: {fileID: 5350304032071115773}
+  audioManager: {fileID: 0}
+  playerController: {fileID: 6284767722486724865}
+  playerAttack: {fileID: 2245749154834590195}
 --- !u!114 &3681295613834884183
 MonoBehaviour:
   m_ObjectHideFlags: 0
