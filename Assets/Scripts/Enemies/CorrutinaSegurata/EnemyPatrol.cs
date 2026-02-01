@@ -13,7 +13,7 @@ public class EnemyPatrol : MonoBehaviour
 
 	public Rigidbody2D _rigidbody;
 	public Animator _animator;
-	//public Weapon _weapon;
+	public Weapon _weapon;
 	public AudioSource _audio;
 
 	// Movement
@@ -100,7 +100,7 @@ public class EnemyPatrol : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
 	}
 
-    /* //IEnumerator AimAndShoot
+    //IEnumerator AimAndShoot
 	private IEnumerator AimAndShoot()
 	{
 		_isAttacking = true;
@@ -113,9 +113,7 @@ public class EnemyPatrol : MonoBehaviour
 
 		_isAttacking = false;
 	}
-	*/
 
-	/*
     void CanShoot()
 	{
 		if (_weapon != null) {
@@ -123,7 +121,6 @@ public class EnemyPatrol : MonoBehaviour
 			_audio.Play();
 		}
 	}
-	*/
 
 	private void OnEnable()
 	{

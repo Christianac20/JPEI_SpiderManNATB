@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public float damageDone;
+    public float damageDone = 1;
     public Animator animator;
     bool isAttacking;
     bool isGrounded;
