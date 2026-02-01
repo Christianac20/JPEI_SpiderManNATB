@@ -187,6 +187,7 @@ MonoBehaviour:
   maxHealth: 20
   currentHealth: 0
   playerAttack: {fileID: 0}
+  animator: {fileID: 2019311559039238763}
 --- !u!1 &8159451855124685730
 GameObject:
   m_ObjectHideFlags: 0
