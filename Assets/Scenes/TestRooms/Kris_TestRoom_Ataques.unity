@@ -384,9 +384,9 @@ GameObject:
   - component: {fileID: 331419084}
   - component: {fileID: 331419083}
   - component: {fileID: 331419082}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: RightLimit
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -603,14 +603,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 2578180014623933905, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5877462992826600834, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5877462992826600834, guid: 4215a6353e3277e43934f357d809139f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.74
@@ -650,18 +642,6 @@ PrefabInstance:
     - target: {fileID: 5877462992826600834, guid: 4215a6353e3277e43934f357d809139f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6357429736438497794, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6357429736438497794, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6357429736438497794, guid: 4215a6353e3277e43934f357d809139f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -809,7 +789,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dee99a9ea44005e4488466cccd629fc7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1173,9 +1153,9 @@ GameObject:
   - component: {fileID: 1546043974}
   - component: {fileID: 1546043973}
   - component: {fileID: 1546043972}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: LeftLimit
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
