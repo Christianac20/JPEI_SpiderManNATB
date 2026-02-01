@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0ed84aa5d7525e841a3710b6f208b28e
+guid: 0a471777c79b5d04388eee2c7e896f7d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,148 +123,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Barra Vida Unity_0
+      name: Spritesheed_BotonesPausa_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 169
-        width: 113
-        height: 26
+        x: 0
+        y: 97
+        width: 124
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8a3714e2a26d694093b3396e6472b4e
-      internalID: -1236370070
+      spriteID: 9d9c16a658befbd48b5f6b9834d4df8c
+      internalID: -2145621733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barra Vida Unity_1
+      name: Spritesheed_BotonesPausa_1
       rect:
         serializedVersion: 2
-        x: 1
-        y: 141
-        width: 113
-        height: 26
+        x: 124
+        y: 97
+        width: 124
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfcc3d5032dc19042b463c7d1b3e9dd7
-      internalID: -106291977
+      spriteID: 9718d0945b4c9cb49b79a0c99257dafc
+      internalID: -1740923652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barra Vida Unity_2
+      name: Spritesheed_BotonesPausa_2
       rect:
         serializedVersion: 2
-        x: 1
-        y: 113
-        width: 113
-        height: 26
+        x: 0
+        y: 66
+        width: 124
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25f9d837891ba864aa33d3b404f870f5
-      internalID: 1613057888
+      spriteID: 78d86f04b0ae4e44ea083d001591d664
+      internalID: -397730825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barra Vida Unity_3
+      name: Spritesheed_BotonesPausa_3
       rect:
         serializedVersion: 2
-        x: 1
-        y: 85
-        width: 113
-        height: 26
+        x: 124
+        y: 66
+        width: 124
+        height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7705c42e620e87a4cb0b8c2932d121a5
-      internalID: 2075710162
+      spriteID: ac2452c216b3a2741872d8f7f3fc5214
+      internalID: 1457567537
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barra Vida Unity_4
+      name: Spritesheed_BotonesPausa_4
       rect:
         serializedVersion: 2
-        x: 1
-        y: 57
-        width: 113
-        height: 26
+        x: 13
+        y: 33
+        width: 98
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52485e53a6701554894f29c141e583ac
-      internalID: 505912127
+      spriteID: c053f984e01b7ca4d86f75c57a8bb81c
+      internalID: -897597284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barra Vida Unity_5
+      name: Spritesheed_BotonesPausa_5
       rect:
         serializedVersion: 2
-        x: 1
-        y: 29
-        width: 113
-        height: 26
+        x: 142
+        y: 33
+        width: 88
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5daf3901f9a7694bb892bd65001600d
-      internalID: 1424047112
+      spriteID: f764744fb8347b8448dd32fe0a8da77b
+      internalID: 733604684
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Barra Vida Unity_6
+      name: Spritesheed_BotonesPausa_6
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 1
-        width: 113
-        height: 26
+        width: 124
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8fd660139da9976429506dae5beff628
-      internalID: -2142558234
+      spriteID: d0035c008a65e554f8d8e3f6e3421018
+      internalID: -362800988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spritesheed_BotonesPausa_7
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1
+        width: 124
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874c461108645874f96eb87c7eab0fa4
+      internalID: -1151682660
       vertices: []
       indices: 
       edges: []
@@ -280,13 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Barra Vida Unity_0: -1236370070
-      Barra Vida Unity_1: -106291977
-      Barra Vida Unity_2: 1613057888
-      Barra Vida Unity_3: 2075710162
-      Barra Vida Unity_4: 505912127
-      Barra Vida Unity_5: 1424047112
-      Barra Vida Unity_6: -2142558234
+      Spritesheed_BotonesPausa_0: -2145621733
+      Spritesheed_BotonesPausa_1: -1740923652
+      Spritesheed_BotonesPausa_2: -397730825
+      Spritesheed_BotonesPausa_3: 1457567537
+      Spritesheed_BotonesPausa_4: -897597284
+      Spritesheed_BotonesPausa_5: 733604684
+      Spritesheed_BotonesPausa_6: -362800988
+      Spritesheed_BotonesPausa_7: -1151682660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
