@@ -1,8 +1,9 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealthDeprecated : MonoBehaviour
 {
+    /*
     [Header("Configuración de Vida")]
     [SerializeField] private int maxHealth = 6;
     private int currentHealth;
@@ -49,4 +50,5 @@ public class PlayerHealth : MonoBehaviour
     // Getters
     public int GetCurrentHealth() => currentHealth;
     public int GetMaxHealth() => maxHealth;
+    */
 }

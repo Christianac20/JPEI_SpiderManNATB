@@ -1,15 +1,24 @@
+// EN LA FOLDER DEL PLAYER
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [Header("Configuración de Vida")]
+    [SerializeField] private int maxHealth = 6;
+    private int currentHealth;
     public int totalHealth = 3;
     //public RectTransform heartUI; // Porque ana tenia el elemento de canvas del heart
 
     //Game Over
     //public RectTransform gameOverMenu; //Menu de game Over
     //public GameObject hordes; // Porque ana lo tenia con hordas
+
+    [Header("Eventos")]
+    public UnityEvent<int> OnHealthChanged; // Evento para actualizar UI
+    public UnityEvent OnPlayerDeath;
 
     private int health;
     //private float heartSize = 16f;
@@ -30,10 +39,11 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        health = totalHealth;
+        currentHealth = maxHealth;
+        OnHealthChanged?.Invoke(currentHealth);
     }
 
-    public void AddDamage(int amount)
+    /*public void AddDamage(int amount)
     {
         health = health - amount;
 
@@ -50,8 +60,20 @@ public class PlayerHealth : MonoBehaviour
         //heartUI.sizeDelta = new Vector2(heartSize * health, heartSize);
 
         Debug.Log("Player got damaged. His current health is " + health);
-    }
+    }*/
 
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        OnHealthChanged?.Invoke(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
     public void AddHealth(int amount)
     {
         health = health + amount;
@@ -102,4 +124,23 @@ public class PlayerHealth : MonoBehaviour
         if (controller != null)
             controller.enabled = false;
     }
+
+    // Método para curar
+    public void Heal(int amount)
+    {
+        currentHealth += amount;
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        OnHealthChanged?.Invoke(currentHealth);
+    }
+
+    void Die()
+    {
+        OnPlayerDeath?.Invoke();
+        Debug.Log("El jugador ha muerto");
+    }
+
+    // Getters
+    public int GetCurrentHealth() => currentHealth;
+    public int GetMaxHealth() => maxHealth;
 }
