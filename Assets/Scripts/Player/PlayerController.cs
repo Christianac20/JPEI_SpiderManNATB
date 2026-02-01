@@ -138,6 +138,5 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
     }
-    #endregion
-    
+    #endregion 
 }

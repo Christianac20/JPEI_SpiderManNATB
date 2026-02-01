@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public int maxHealth = 10;
-    public int currentHealth;
+    public float maxHealth = 10.0f;
+    public float currentHealth;
     public PlayerAttack playerAttack;
 
     /*
@@ -29,9 +29,10 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage()
     {
         Debug.Log("TakeDamage solicitado");
+        
         currentHealth -= playerAttack.damageDone;
 
-        if (currentHealth <= 0)
+        if (currentHealth <= 0.0f)
         {
             Destroy(gameObject);
         }

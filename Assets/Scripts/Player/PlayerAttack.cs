@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    public int damageDone;
+    public float damageDone;
     public Animator animator;
     bool isAttacking;
     bool isGrounded;
@@ -112,5 +112,4 @@ public class PlayerAttack : MonoBehaviour
         }
     }
     #endregion
-
 }
