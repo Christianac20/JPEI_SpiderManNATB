@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 8
-  speed: 2.25
+  speed: 5
   direction: {x: 0, y: 0}
   livingTime: 3
   initialColor: {r: 1, g: 1, b: 1, a: 1}
