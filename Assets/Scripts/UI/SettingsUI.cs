@@ -7,18 +7,30 @@ public class SettingsUI : MonoBehaviour
     public Toggle fullscreenToggle;
     public Slider volumeSlider;
 
-    void Start()
+    void OnEnable() // Cambiar de Start a OnEnable para que se actualice cada vez que se active
     {
-        // Cargar valores actuales del SettingsManager
-        if (SettingsManager.Instance != null)
-        {
-            fullscreenToggle.isOn = SettingsManager.Instance.GetFullscreen();
-            volumeSlider.value = SettingsManager.Instance.GetVolume();
-        }
+        LoadCurrentSettings();
 
         // Agregar listeners
         fullscreenToggle.onValueChanged.AddListener(OnFullscreenChanged);
         volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
+    }
+
+    void OnDisable()
+    {
+        // Remover listeners para evitar duplicados
+        fullscreenToggle.onValueChanged.RemoveListener(OnFullscreenChanged);
+        volumeSlider.onValueChanged.RemoveListener(OnVolumeChanged);
+    }
+
+    void LoadCurrentSettings()
+    {
+        if (SettingsManager.Instance != null)
+        {
+            // Cargar sin disparar eventos
+            fullscreenToggle.SetIsOnWithoutNotify(SettingsManager.Instance.GetFullscreen());
+            volumeSlider.SetValueWithoutNotify(SettingsManager.Instance.GetVolume());
+        }
     }
 
     void OnFullscreenChanged(bool value)

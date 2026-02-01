@@ -5,33 +5,36 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Configuración de Vida")]
     [SerializeField] private int maxHealth = 6;
-    public int currentHealth;
+    private int currentHealth;
 
     [Header("Eventos")]
-    public UnityEvent<int> OnHealthChanged; // Evento para actualizar UI
+    public UnityEvent<int> OnHealthChanged;
     public UnityEvent OnPlayerDeath;
-    public Animator animator;
-    public AudioManager audioManager;
-    public PlayerController playerController;
-    public PlayerAttack playerAttack;
 
-    private void Awake()
+    void Awake() // Cambiar de Start a Awake
     {
-        animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     void Start()
     {
-        currentHealth = maxHealth;
+        // Invocar el evento después de inicializar
         OnHealthChanged?.Invoke(currentHealth);
     }
 
-    // Método para recibir daño
     public void TakeDamage(int damage)
     {
+        // Validación extra
+        if (damage < 0)
+        {
+            Debug.LogWarning("El daño no puede ser negativo");
+            return;
+        }
+
         currentHealth -= damage;
-        audioManager.PlaySFX(audioManager.Hurt_01);
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        Debug.Log($"Jugador recibió {damage} de daño. Vida actual: {currentHealth}");
 
         OnHealthChanged?.Invoke(currentHealth);
 
@@ -41,25 +44,29 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    // Método para curar
     public void Heal(int amount)
     {
+        if (amount < 0)
+        {
+            Debug.LogWarning("La curación no puede ser negativa");
+            return;
+        }
+
         currentHealth += amount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        Debug.Log($"Jugador curado {amount}. Vida actual: {currentHealth}");
 
         OnHealthChanged?.Invoke(currentHealth);
     }
 
     void Die()
     {
-        OnPlayerDeath?.Invoke();
-        animator.SetTrigger("Death");
         Debug.Log("El jugador ha muerto");
-        playerController.enabled = false;
-        playerAttack.enabled = false;
+        OnPlayerDeath?.Invoke();
+        // Aquí puedes agregar lógica de muerte
     }
 
-    // Getters
     public int GetCurrentHealth() => currentHealth;
     public int GetMaxHealth() => maxHealth;
 }
