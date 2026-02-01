@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Karel_TestRoom_Canvas.unity
+    path: Assets/Scenes/TestRooms/Karel_TestRoom_Canvas.unity
     guid: 236228def65930f4d934178155c605f3
   - enabled: 1
-    path: Assets/Scenes/Juego.unity
+    path: Assets/Scenes/Level_01.unity
     guid: 5cd8a3efc80ffd34d8ec93169d6651cb
   - enabled: 1
     path: Assets/Scenes/Menu.unity
