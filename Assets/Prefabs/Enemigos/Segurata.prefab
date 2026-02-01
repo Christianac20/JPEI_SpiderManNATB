@@ -14,13 +14,14 @@ GameObject:
   - component: {fileID: 5297860350962748902}
   - component: {fileID: 9014499785929502862}
   - component: {fileID: 5667320399348388285}
+  - component: {fileID: 2173365687829872272}
   m_Layer: 0
   m_Name: Segurata
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5829922391543132720
 Transform:
   m_ObjectHideFlags: 0
@@ -187,8 +188,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   currentHealth: 0
-  playerAttack: {fileID: 0}
+  playerAttack: {fileID: 2245749154834590195, guid: 4215a6353e3277e43934f357d809139f, type: 3}
   animator: {fileID: 9014499785929502862}
+--- !u!114 &2173365687829872272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2915031035344599884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334d8aaf8fec37b48a88e215e0555046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  wallAware: 1.5
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  playerAware: 3
+  aimingTime: 0.5
+  shootingTime: 1.5
+  _rigidbody: {fileID: 7008617663375455499}
+  _animator: {fileID: 9014499785929502862}
+  _audio: {fileID: 0}
 --- !u!1 &4363073657002274721
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +344,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.08721471, y: 0.05450946}
+  m_Offset: {x: 3.7303567, y: 0.05450946}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -331,5 +355,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.1744294, y: 1.7195238}
+  m_Size: {x: 8.460717, y: 1.1102748}
   m_EdgeRadius: 0

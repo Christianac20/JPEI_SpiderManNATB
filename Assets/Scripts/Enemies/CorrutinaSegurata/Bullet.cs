@@ -56,13 +56,15 @@ public class Bullet : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		if (_returning == false && collision.CompareTag("Player")) {
+		if (_returning == false && collision.CompareTag("Player")) 
+		{
 			// Tell player to get hurt
-			collision.SendMessageUpwards("AddDamage", damage);
+			collision.SendMessageUpwards("TakeDamage", damage);
 			Explode();
 		}
 
-		if (_returning == true && collision.CompareTag("Enemy")) {
+		if (_returning == true && collision.CompareTag("Enemy")) 
+		{
 			collision.SendMessageUpwards("AddDamage");
 			Explode();
 		}
@@ -84,6 +86,6 @@ public class Bullet : MonoBehaviour
 			explosion.SetActive(true);
 		}
 
-		Destroy(gameObject, 1.5f);
+		Destroy(gameObject, 0.5f);
 	}
 }

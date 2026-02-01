@@ -8,6 +8,7 @@ TagManager:
   - Destructible
   - Audio
   - Enemy
+  - Big Bullet
   layers:
   - Default
   - TransparentFX

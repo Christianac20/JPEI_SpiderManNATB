@@ -7,13 +7,14 @@ public class EnemyPatrol : MonoBehaviour
 	public float speed = 1f;
 	public float wallAware = 0.5f;
 	public LayerMask groundLayer;
+	public float playerAware = 3f;
 	public float aimingTime = 0.5f;
 	public float shootingTime = 1.5f;
 
-	private Rigidbody2D _rigidbody;
-	private Animator _animator;
-	private Weapon _weapon;
-	private AudioSource _audio;
+	public Rigidbody2D _rigidbody;
+	public Animator _animator;
+	//public Weapon _weapon;
+	public AudioSource _audio;
 
 	// Movement
 	private Vector2 _movement;
@@ -25,7 +26,7 @@ public class EnemyPatrol : MonoBehaviour
 	{
 		_rigidbody = GetComponent<Rigidbody2D>();
 		_animator = GetComponent<Animator>();
-		_weapon = GetComponentInChildren<Weapon>();
+		//_weapon = GetComponentInChildren<Weapon>();
 		_audio = GetComponent<AudioSource>();
 	}
 
@@ -99,6 +100,7 @@ public class EnemyPatrol : MonoBehaviour
 		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
 	}
 
+    /* //IEnumerator AimAndShoot
 	private IEnumerator AimAndShoot()
 	{
 		_isAttacking = true;
@@ -111,14 +113,17 @@ public class EnemyPatrol : MonoBehaviour
 
 		_isAttacking = false;
 	}
+	*/
 
-	void CanShoot()
+	/*
+    void CanShoot()
 	{
 		if (_weapon != null) {
 			_weapon.Shoot();
 			_audio.Play();
 		}
 	}
+	*/
 
 	private void OnEnable()
 	{

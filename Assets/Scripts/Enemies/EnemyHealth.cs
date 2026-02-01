@@ -9,13 +9,6 @@ public class EnemyHealth : MonoBehaviour
     public PlayerAttack playerAttack;
     public Animator animator;
 
-    /*
-    public void AddDamage()
-    {
-        gameObject.SetActive(false);
-    }
-    */
-
     // Start is called before the first frame update
     void Start()
     {
@@ -26,21 +19,6 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
     }
-
-    /*
-    public void TakeDamage()
-    {
-        Debug.Log("TakeDamage solicitado");
-        
-        currentHealth -= playerAttack.damageDone;
-
-        if (currentHealth <= 0.0f)
-        {
-            animator.SetTrigger("Death");
-            Destroy(gameObject);
-        }
-    }
-    */
 
     public void TakeDamage()
     {
