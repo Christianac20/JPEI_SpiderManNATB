@@ -7,13 +7,13 @@ public class DamageTest : MonoBehaviour
     void Update()
     {
         // Presiona la tecla H para recibir daño
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.N))
         {
             playerHealth.TakeDamage(1);
         }
 
         // Presiona la tecla J para curarse
-        if (Input.GetKeyDown(KeyCode.J))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             playerHealth.Heal(1);
         }
