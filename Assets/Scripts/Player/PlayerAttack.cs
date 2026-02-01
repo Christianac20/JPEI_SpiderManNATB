@@ -10,9 +10,13 @@ public class PlayerAttack : MonoBehaviour
     bool isGrounded;
     EnemyHealth enemyHealth;
 
+    //Manejo de audio
+    AudioManger audioManager;
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManger>(); //Pillar audio source del gameObject
     }
 
     private void Update()
@@ -40,7 +44,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (isAttacking == true)
         {
-            if (collision.CompareTag("Enemy") || collision.CompareTag("Box"))
+            if (collision.CompareTag("Enemy") || collision.CompareTag("Destructible"))
             {
                 //collision.SendMessageUpwards("AddDamage");
                 collision.SendMessageUpwards("TakeDamage");
@@ -53,10 +57,11 @@ public class PlayerAttack : MonoBehaviour
     private void MegaPunch()
     {
         // Con el input manager para atacar MegaPunch
-        if (isGrounded && Input.GetButtonDown("Mega Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        if (isGrounded && !isAttacking && Input.GetButtonDown("Mega Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
-            damageDone = 5/2; //Por ahora asi para que en verdad haga el daño grande. Por algun bug es como que llama a la funcion 2 veces y hace daño doble???
+            damageDone = 5;
             animator.SetTrigger("AttackMegaPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.Purificator_01);
         }
     }
 
@@ -64,10 +69,11 @@ public class PlayerAttack : MonoBehaviour
     private void Punch()
     {
         // Con el input manager para atacar Punch
-        if (isGrounded && isAttacking == false && Input.GetButtonDown("Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        if (isGrounded && !isAttacking && isAttacking == false && Input.GetButtonDown("Punch")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
-            damageDone = 2/2; //Por ahora asi para que en verdad haga el daño grande. Por algun bug es como que llama a la funcion 2 veces y hace daño doble???
+            damageDone = 2; 
             animator.SetTrigger("AttackPunch"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.Punch_01);
         }
     }
 
@@ -75,10 +81,11 @@ public class PlayerAttack : MonoBehaviour
     private void Kick()
     {
         // Con el input manager para atacar Kick
-        if (isGrounded && Input.GetButtonDown("Kick")) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        if (isGrounded && !isAttacking && Input.GetButtonDown("Kick")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
-            damageDone = 2/2; //Por ahora asi para que en verdad haga el daño grande. Por algun bug es como que llama a la funcion 2 veces y hace daño doble???
+            damageDone = 2;
             animator.SetTrigger("AttackKick"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.Kick_01);
         }
     }
 
@@ -86,10 +93,11 @@ public class PlayerAttack : MonoBehaviour
     private void ShootWeb()
     {
         // Con el input manager para atacar ShootWeb
-        if (isGrounded && Input.GetButtonDown("Shoot Web")) // SI esta en el suelo y se pulsan las teclas para ese ataque
+        if (isGrounded && !isAttacking && Input.GetButtonDown("Shoot Web")) // SI esta en el suelo y se pulsan las teclas para ese ataque
         {
-            damageDone = 1/2; //Por ahora asi para que en verdad haga el daño grande. Por algun bug es como que llama a la funcion 2 veces y hace daño doble???
+            damageDone = 1;
             animator.SetTrigger("AttackShootWeb"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
+            audioManager.PlaySFX(audioManager.WebShoot_01);
         }
     }
     #endregion

@@ -30,6 +30,9 @@ public class PlayerController : MonoBehaviour
     //Variables Compuestas
     [Header("Variables compuestas")]
     Vector2 movement;
+
+    //Manejo de audio
+    AudioManger audioManager;
     #endregion
 
     void Awake() //Usado para guardar componentes al iniciar
@@ -38,6 +41,7 @@ public class PlayerController : MonoBehaviour
         rigidbodyPlayer = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManger>(); //Pillar audio source del gameObject
         #endregion
     }
 
@@ -89,6 +93,7 @@ public class PlayerController : MonoBehaviour
         {
             rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("IsGrounded", false);
+            audioManager.PlaySFX(audioManager.Jump_01);
         }
     }
 
