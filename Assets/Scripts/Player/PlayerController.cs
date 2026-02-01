@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
     bool isAttacking;
     bool isGrounded;
     bool isRunning;
+    private bool _facingRight = true;
 
     //Variables de Componente
     [Header("Variables de Componente")]
@@ -54,11 +55,20 @@ public class PlayerController : MonoBehaviour
             horizontalInput = Input.GetAxisRaw("Horizontal"); //Detecta cuando pulsas las flechas Izquierda / Derecha
             transform.Translate(Vector2.right * Time.deltaTime * xSpeed * xSpeedMultiplier * horizontalInput);
             movement = new Vector2(horizontalInput, 0f);
+
+            // Flip character
+            if (horizontalInput < 0f && _facingRight == true)
+            {
+                Flip();
+            }
+            else if (horizontalInput > 0f && _facingRight == false)
+            {
+                Flip();
+            }
         }
 
         // Llamo a las funciones modificadoras del movimiento
         AnimationTagCheck();
-        FlipPlayer();
         Jump();
         Run();
         #endregion
@@ -74,16 +84,12 @@ public class PlayerController : MonoBehaviour
     #region METODOS MODIFICADORES DEL MOVIMIENTO
 
     //Corregimos la orientación del player
-    private void FlipPlayer()
+    private void Flip()
     {
-        if (horizontalInput > 0.01)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (horizontalInput < -0.01)
-        {
-            spriteRenderer.flipX = true;
-        }
+        _facingRight = !_facingRight;
+		float localScaleX = transform.localScale.x;
+		localScaleX = localScaleX * -1f;
+		transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
     // Is Jumping?
