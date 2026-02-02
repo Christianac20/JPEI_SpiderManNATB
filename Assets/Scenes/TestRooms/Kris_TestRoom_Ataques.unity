@@ -306,10 +306,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7661315097752968480, guid: 535ff1c244efbf94283a2c0eafc8cf10, type: 3}
-      propertyPath: m_SortingOrder
-      value: -1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -551,10 +547,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5258411798632434785, guid: c43a2acdbd2ec1c48ae66442f8e00a74, type: 3}
-      propertyPath: playerAttack
-      value: 
-      objectReference: {fileID: 1919836642}
-    - target: {fileID: 6439083685752265479, guid: c43a2acdbd2ec1c48ae66442f8e00a74, type: 3}
       propertyPath: playerAttack
       value: 
       objectReference: {fileID: 1919836642}
@@ -1547,133 +1539,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5877462992826600834, guid: 4215a6353e3277e43934f357d809139f, type: 3}
   m_PrefabInstance: {fileID: 641091775}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1935950805 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1618574099835413687, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-  m_PrefabInstance: {fileID: 3706025031955592055}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &1935950807
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1935950805}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.11, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.9949387, y: 0.5166422}
-  m_EdgeRadius: 0
---- !u!1001 &3706025031955592055
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 710023230195048196, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_Name
-      value: WebShoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 710023230195048196, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_TagString
-      value: WebShooted
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.77
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5728796754713759428, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8320941340943605012, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_Radius
-      value: 0.64234847
-      objectReference: {fileID: 0}
-    - target: {fileID: 8320941340943605012, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.24234849
-      objectReference: {fileID: 0}
-    - target: {fileID: 8440578699988427843, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      propertyPath: playerAttack
-      value: 
-      objectReference: {fileID: 1919836642}
-    m_RemovedComponents:
-    - {fileID: 8320941340943605012, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1618574099835413687, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1935950807}
-  m_SourcePrefab: {fileID: 100100000, guid: f3c9b84e10d0e3c4d9bb6033167f2beb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1690,4 +1555,3 @@ SceneRoots:
   - {fileID: 53604453}
   - {fileID: 1347174897}
   - {fileID: 1537978686}
-  - {fileID: 3706025031955592055}
