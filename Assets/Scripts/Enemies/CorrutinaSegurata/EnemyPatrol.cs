@@ -14,20 +14,21 @@ public class EnemyPatrol : MonoBehaviour
 	public Rigidbody2D _rigidbody;
 	public Animator _animator;
 	public Weapon _weapon;
-	public AudioSource _audio;
 
 	// Movement
 	private Vector2 _movement;
 	private bool _facingRight;
 
-	private bool _isAttacking;
+	public bool _isAttacking;
+	public PlayerHealth playerHealth;
+	public GameObject shootingArea;
+    public GameObject Weapon;
+	public EnemyPatrol enemyPatrol;
 
-	void Awake()
+    void Awake()
 	{
 		_rigidbody = GetComponent<Rigidbody2D>();
 		_animator = GetComponent<Animator>();
-		//_weapon = GetComponentInChildren<Weapon>();
-		_audio = GetComponent<AudioSource>();
 	}
 
 	// Start is called before the first frame update
@@ -55,6 +56,12 @@ public class EnemyPatrol : MonoBehaviour
 			}
 		}
 
+		if (playerHealth.currentHealth <= 0)
+		{
+			shootingArea.SetActive(false);
+			Weapon.SetActive(false);
+			enemyPatrol.enabled = false;
+		}
 	}
 
 	private void FixedUpdate()
@@ -81,12 +88,13 @@ public class EnemyPatrol : MonoBehaviour
 	{
 		if (_isAttacking == false && collision.CompareTag("Player")) {
 			StartCoroutine("AimAndShoot");
+			Debug.Log("Corrutina AimAndShoot llamada");
 		}
 	}
 
 	private void Attack1()
 	{
-        if (_isAttacking == false && Input.GetKeyDown(KeyCode.J))
+        if (_isAttacking == false && Input.GetKeyDown(KeyCode.T))
         {
             StartCoroutine("AimAndShoot");
         }
@@ -105,20 +113,21 @@ public class EnemyPatrol : MonoBehaviour
 	{
 		_isAttacking = true;
 
-		yield return new WaitForSeconds(aimingTime);
+		yield return new WaitForSeconds(1f);
 
 		_animator.SetTrigger("Shoot");
+		CanShoot();
 
-		yield return new WaitForSeconds(shootingTime);
+        yield return new WaitForSeconds(1f);
 
 		_isAttacking = false;
 	}
 
     void CanShoot()
 	{
-		if (_weapon != null) {
+		if (_weapon != null /*&& playerHealth.currentHealth > 0*/) 
+		{
 			_weapon.Shoot();
-			_audio.Play();
 		}
 	}
 

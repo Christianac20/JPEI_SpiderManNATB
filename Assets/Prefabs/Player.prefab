@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bdaa88724c39b41a7df83aa860f4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageDone: 0
+  damageDone: 1
   animator: {fileID: 5350304032071115773}
   audioManager: {fileID: 0}
 --- !u!114 &9182399692998331167

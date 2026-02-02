@@ -32,15 +32,19 @@ public class Weapon : MonoBehaviour
 
 	public void Shoot()
 	{
-		if (bulletPrefab != null && _firePoint != null && shooter != null) {
+		if (bulletPrefab != null && _firePoint != null && shooter != null) 
+		{
 			GameObject myBullet = Instantiate(bulletPrefab, _firePoint.position, Quaternion.identity) as GameObject;
 
 			Bullet bulletComponent = myBullet.GetComponent<Bullet>();
 
-			if (shooter.transform.localScale.x < 0f) {
+			if (shooter.transform.localScale.x < 0f) 
+			{
 				// Left
 				bulletComponent.direction = Vector2.left; // new Vector2(-1f, 0f)
-			} else {
+			} 
+			else 
+			{
 				// Right
 				bulletComponent.direction = Vector2.right; // new Vector2(1f, 0f)
 			}

@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: FirePoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -247,7 +247,11 @@ MonoBehaviour:
   _rigidbody: {fileID: 7008617663375455499}
   _animator: {fileID: 9014499785929502862}
   _weapon: {fileID: 6620349070839468171}
-  _audio: {fileID: 0}
+  _isAttacking: 0
+  playerHealth: {fileID: 0}
+  shootingArea: {fileID: 5653763820107383442}
+  Weapon: {fileID: 4978557501227672925}
+  enemyPatrol: {fileID: 2173365687829872272}
 --- !u!1 &4363073657002274721
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +431,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 3.7303567, y: 0.05450946}
+  m_Offset: {x: 2.654987, y: -0.24219668}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -438,5 +442,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.460717, y: 1.1102748}
+  m_Size: {x: 6.309979, y: 0.51686263}
   m_EdgeRadius: 0

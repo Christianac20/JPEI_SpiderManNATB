@@ -17,7 +17,6 @@ public class Bullet : MonoBehaviour
 	private SpriteRenderer _renderer;
 	private Rigidbody2D _rigidbody;
 	private float _startingTime;
-
 	private bool _returning;
 
 	void Awake()
@@ -60,7 +59,7 @@ public class Bullet : MonoBehaviour
 		{
 			// Tell player to get hurt
 			collision.SendMessageUpwards("TakeDamage", damage);
-			Explode();
+            Explode();
 		}
 
 		if (_returning == true && collision.CompareTag("Enemy")) 
