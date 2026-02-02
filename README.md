@@ -4,3 +4,4 @@ Juego Beat-em'up sobre Spider-Man luchando contra Fisk, que está contaminando l
 Movimiento y combate retro con una perspectiva 2.5D
 Incluye un pequeño tutorial y el level 1, pues es una demo.
 Dani se hizo lo que se pudo 🥲.
+Version 1.0 a punto casi.
