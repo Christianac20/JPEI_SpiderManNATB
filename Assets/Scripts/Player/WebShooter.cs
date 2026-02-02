@@ -32,22 +32,26 @@ public class WebShooter : MonoBehaviour
 
 	public void Shoot()
 	{
-		if (bulletPrefab != null && _firePoint != null && shooter != null) 
+        Debug.Log("Shoot llamado");
+        if (bulletPrefab != null && _firePoint != null && shooter != null) 
 		{
 			GameObject myBullet = Instantiate(bulletPrefab, _firePoint.position, Quaternion.identity) as GameObject;
+			Debug.Log("Instancia creada");
 
-			Bullet bulletComponent = myBullet.GetComponent<Bullet>();
+            WebShoot bulletComponent = myBullet.GetComponent<WebShoot>();
 
 			if (shooter.transform.localScale.x < 0f) 
 			{
 				// Left
 				bulletComponent.direction = Vector2.left; // new Vector2(-1f, 0f)
-			} 
+                Debug.Log("Vector Left");
+            } 
 			else 
 			{
 				// Right
 				bulletComponent.direction = Vector2.right; // new Vector2(1f, 0f)
-			}
+                Debug.Log("Vector Right");
+            }
 		}
 	}
 }

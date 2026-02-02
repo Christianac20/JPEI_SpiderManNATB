@@ -34,9 +34,9 @@ public class Weapon : MonoBehaviour
 	{
 		if (bulletPrefab != null && _firePoint != null && shooter != null) 
 		{
-			GameObject myBullet = Instantiate(bulletPrefab, _firePoint.position, Quaternion.identity) as GameObject;
+			GameObject myWeb = Instantiate(bulletPrefab, _firePoint.position, Quaternion.identity) as GameObject;
 
-			Bullet bulletComponent = myBullet.GetComponent<Bullet>();
+			Bullet bulletComponent = myWeb.GetComponent<Bullet>();
 
 			if (shooter.transform.localScale.x < 0f) 
 			{
