@@ -21,7 +21,6 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         doThisDamage = playerAttack.damageDone;
-        Debug.Log(doThisDamage);
     }
 
     public void TakeDamage()

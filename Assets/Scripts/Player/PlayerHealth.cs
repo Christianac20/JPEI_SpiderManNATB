@@ -10,10 +10,16 @@ public class PlayerHealth : MonoBehaviour
     [Header("Eventos")]
     public UnityEvent<int> OnHealthChanged;
     public UnityEvent OnPlayerDeath;
+    public PlayerAttack playerAttack;
+    public PlayerController playerController;
+    public Animator animator;
 
     void Awake() // Cambiar de Start a Awake
     {
         currentHealth = maxHealth;
+        playerAttack = GetComponent<PlayerAttack>();
+        playerController = GetComponent<PlayerController>();
+        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -65,6 +71,9 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("El jugador ha muerto");
         OnPlayerDeath?.Invoke();
         // Aquí puedes agregar lógica de muerte
+        playerController.enabled = false;
+        playerAttack.enabled = false;
+        animator.SetTrigger("Death");
     }
 
     public int GetCurrentHealth() => currentHealth;
