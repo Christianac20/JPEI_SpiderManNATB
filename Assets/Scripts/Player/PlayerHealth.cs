@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.UI;
 using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
@@ -13,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public PlayerAttack playerAttack;
     public PlayerController playerController;
     public Animator animator;
+    public GameObject deathCanvas;
 
     void Awake() // Cambiar de Start a Awake
     {
@@ -74,6 +76,7 @@ public class PlayerHealth : MonoBehaviour
         playerController.enabled = false;
         playerAttack.enabled = false;
         animator.SetTrigger("Death");
+        deathCanvas.SetActive(true);
     }
 
     public int GetCurrentHealth() => currentHealth;
