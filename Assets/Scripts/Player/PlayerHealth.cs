@@ -1,19 +1,27 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
     [Header("Configuración de Vida")]
     [SerializeField] private int maxHealth = 6;
-    private int currentHealth;
+    public int currentHealth;
 
     [Header("Eventos")]
     public UnityEvent<int> OnHealthChanged;
     public UnityEvent OnPlayerDeath;
+    public PlayerAttack playerAttack;
+    public PlayerController playerController;
+    public Animator animator;
+    public GameObject deathCanvas;
 
     void Awake() // Cambiar de Start a Awake
     {
         currentHealth = maxHealth;
+        playerAttack = GetComponent<PlayerAttack>();
+        playerController = GetComponent<PlayerController>();
+        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -65,6 +73,10 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("El jugador ha muerto");
         OnPlayerDeath?.Invoke();
         // Aquí puedes agregar lógica de muerte
+        playerController.enabled = false;
+        playerAttack.enabled = false;
+        animator.SetTrigger("Death");
+        deathCanvas.SetActive(true);
     }
 
     public int GetCurrentHealth() => currentHealth;
