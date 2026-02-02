@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     [Header("Configuración de Vida")]
     [SerializeField] private int maxHealth = 6;
-    private int currentHealth;
+    public int currentHealth;
 
     [Header("Eventos")]
     public UnityEvent<int> OnHealthChanged;
