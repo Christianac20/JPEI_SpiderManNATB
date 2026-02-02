@@ -10,3 +10,5 @@ Ahora con titulo y todo WOW!
 
 Spiderman ya vuelve a tener ammo del Webshooter! Por fin puede usarlo.
 
+Las Cajas ahora dropean vida!
+
