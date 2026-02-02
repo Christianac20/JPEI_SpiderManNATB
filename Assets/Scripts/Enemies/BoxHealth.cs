@@ -9,6 +9,8 @@ public class BoxHealth : MonoBehaviour
     public PlayerAttack playerAttack;
     public Animator animator;
     public float doThisDamage;
+    public GameObject medkitPrefab;
+    public Transform spawnLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,8 @@ public class BoxHealth : MonoBehaviour
         {
             animator.SetTrigger("Death");
             yield return new WaitForSeconds(1.0f);
+            GameObject myMedkit = Instantiate(medkitPrefab,spawnLocation.position, Quaternion.identity) as GameObject;
+            yield return new WaitForSeconds(0.5f);
             Destroy(gameObject);
         }
     }
