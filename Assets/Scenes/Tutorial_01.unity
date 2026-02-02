@@ -883,11 +883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332485593417445841, guid: 60718889fbaf66c49b05e1657a2e2b21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.6188009
+      value: -0.6168561
       objectReference: {fileID: 0}
     - target: {fileID: 2332485593417445841, guid: 60718889fbaf66c49b05e1657a2e2b21, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5999999
+      value: 1.6000001
       objectReference: {fileID: 0}
     - target: {fileID: 2524493833255545821, guid: 60718889fbaf66c49b05e1657a2e2b21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4921,7 +4921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a649cf20c72854caa074e758501bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   currentHealth: 0
   playerAttack: {fileID: 931835644}
   animator: {fileID: 946360797}
@@ -7819,7 +7819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a649cf20c72854caa074e758501bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   currentHealth: 0
   playerAttack: {fileID: 931835644}
   animator: {fileID: 1545270689}
@@ -8040,7 +8040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a649cf20c72854caa074e758501bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   currentHealth: 0
   playerAttack: {fileID: 931835644}
   animator: {fileID: 1621731854}
@@ -8230,7 +8230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a649cf20c72854caa074e758501bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   currentHealth: 0
   playerAttack: {fileID: 931835644}
   animator: {fileID: 1675502096}
@@ -8668,7 +8668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a649cf20c72854caa074e758501bcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 2
+  maxHealth: 1
   currentHealth: 0
   playerAttack: {fileID: 931835644}
   animator: {fileID: 1748182272}
