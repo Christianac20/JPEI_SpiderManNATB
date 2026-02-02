@@ -93,7 +93,6 @@ GameObject:
   - component: {fileID: 6284767722486724865}
   - component: {fileID: 2245749154834590195}
   - component: {fileID: 9182399692998331167}
-  - component: {fileID: 3681295613834884183}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -299,27 +298,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 6
-  currentHealth: 0
   OnHealthChanged:
     m_PersistentCalls:
       m_Calls: []
   OnPlayerDeath:
     m_PersistentCalls:
       m_Calls: []
-  animator: {fileID: 5350304032071115773}
-  audioManager: {fileID: 0}
-  playerController: {fileID: 6284767722486724865}
-  playerAttack: {fileID: 2245749154834590195}
---- !u!114 &3681295613834884183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958927802624286156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25bbb046400963d418870e8c907ade2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 9182399692998331167}

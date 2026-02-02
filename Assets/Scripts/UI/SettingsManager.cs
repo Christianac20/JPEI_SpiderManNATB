@@ -6,7 +6,7 @@ public class SettingsManager : MonoBehaviour
     public static SettingsManager Instance { get; private set; }
 
     [Header("Referencias")]
-    public AudioMixer audioMixer; 
+    public AudioMixer audioMixer;
 
     // Variables de configuración
     private bool isFullscreen;
@@ -18,12 +18,12 @@ public class SettingsManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // Persiste entre escenas
+            DontDestroyOnLoad(gameObject);
             LoadSettings(); // Carga configuración guardada
         }
         else
         {
-            Destroy(gameObject); // Destruye duplicados
+            Destroy(gameObject);
             return;
         }
     }
@@ -41,6 +41,13 @@ public class SettingsManager : MonoBehaviour
     {
         volume = vol;
         AudioListener.volume = vol;
+
+        // Si usas AudioMixer, descomentar:
+        // if (audioMixer != null)
+        // {
+        //     audioMixer.SetFloat("Volumen", Mathf.Log10(vol) * 20);
+        // }
+
         SaveSettings();
     }
 
@@ -65,5 +72,7 @@ public class SettingsManager : MonoBehaviour
         // Aplicar configuración cargada
         Screen.fullScreen = isFullscreen;
         AudioListener.volume = volume;
+
+        Debug.Log($"Ajustes cargados - Pantalla completa: {isFullscreen}, Volumen: {volume}");
     }
 }
