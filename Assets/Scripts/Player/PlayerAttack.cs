@@ -6,9 +6,12 @@ public class PlayerAttack : MonoBehaviour
 {
     public float damageDone = 1;
     public Animator animator;
-    bool isAttacking;
+    public bool isAttacking;
     bool isGrounded;
     EnemyHealth enemyHealth;
+
+    public GameObject webShootProjectile; //almacena el proyectil
+    public WebShooter webShooter;
 
     //Manejo de audio
     public AudioManager audioManager;
@@ -97,7 +100,13 @@ public class PlayerAttack : MonoBehaviour
             damageDone = 1;
             animator.SetTrigger("AttackShootWeb"); // Activo el trigger correspondiente a este ataque para reproducir la animacion
             audioManager.PlaySFX(audioManager.WebShoot_01);
+            webShooter.Shoot();
         }
+    }
+
+    void shootWeb()
+    {
+        Instantiate(webShootProjectile, transform.position, webShootProjectile.transform.rotation);
     }
     #endregion
 

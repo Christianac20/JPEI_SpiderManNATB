@@ -9,6 +9,7 @@ TagManager:
   - Audio
   - Enemy
   - Big Bullet
+  - WebShooted
   layers:
   - Default
   - TransparentFX
