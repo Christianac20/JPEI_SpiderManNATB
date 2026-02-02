@@ -892,7 +892,7 @@ GameObject:
   - component: {fileID: 125286064}
   - component: {fileID: 125286063}
   m_Layer: 0
-  m_Name: ATRASFURCIA
+  m_Name: LimitRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
