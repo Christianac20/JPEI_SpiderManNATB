@@ -8,13 +8,8 @@ public class EnemyHealth : MonoBehaviour
     public float currentHealth;
     public PlayerAttack playerAttack;
     public Animator animator;
-
-    /*
-    public void AddDamage()
-    {
-        gameObject.SetActive(false);
-    }
-    */
+    public EnemyPatrol enemyPatrol;
+    public float doThisDamage;
 
     // Start is called before the first frame update
     void Start()
@@ -25,22 +20,9 @@ public class EnemyHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        doThisDamage = playerAttack.damageDone;
+        Debug.Log(doThisDamage);
     }
-
-    /*
-    public void TakeDamage()
-    {
-        Debug.Log("TakeDamage solicitado");
-        
-        currentHealth -= playerAttack.damageDone;
-
-        if (currentHealth <= 0.0f)
-        {
-            animator.SetTrigger("Death");
-            Destroy(gameObject);
-        }
-    }
-    */
 
     public void TakeDamage()
     {
@@ -51,20 +33,16 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log("TakeDamage solicitado");
 
-        currentHealth -= playerAttack.damageDone;
+        currentHealth -= doThisDamage;
+        Debug.Log("doThisDamage es " + doThisDamage);
 
         if (currentHealth <= 0.0f)
         {
+            enemyPatrol.enabled = false;
+            Debug.Log("enemyPatrol.enabled = false solicitado");
             animator.SetTrigger("Death");
-        }
-
-        //yield on a new YieldInstruction that waits for 5 seconds.
-        yield return new WaitForSeconds(3f);
-
-        if (currentHealth <= 0.0f)
-        {
+            yield return new WaitForSeconds(1.0f);
             Destroy(gameObject);
         }
-        
     }
 }
