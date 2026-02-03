@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 636605623179444355}
   - component: {fileID: 2925217362896318739}
   - component: {fileID: 5415278974462446326}
-  - component: {fileID: 1570928466562604216}
   m_Layer: 0
   m_Name: MedKit
   m_TagString: Untagged
@@ -100,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1c0b3584d9fa842ab32d533146211c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 9182399692998331167, guid: 4215a6353e3277e43934f357d809139f, type: 3}
+  playerHealth: {fileID: 0}
   healthToHeal: 3
 --- !u!61 &2925217362896318739
 BoxCollider2D:
@@ -192,30 +191,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2538762, y: 1.2343473}
   m_EdgeRadius: 0
---- !u!50 &1570928466562604216
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6051545812227534510}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0

@@ -44,13 +44,10 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isAttacking == true)
+        if (isAttacking == true || collision.CompareTag("Enemy") || collision.CompareTag("Destructible"))
         {
-            if (collision.CompareTag("Enemy") || collision.CompareTag("Destructible"))
-            {
                 //collision.SendMessageUpwards("AddDamage");
-                collision.SendMessageUpwards("TakeDamage");
-            }    
+                collision.SendMessageUpwards("TakeDamage"); 
         }
     }
 
@@ -102,11 +99,6 @@ public class PlayerAttack : MonoBehaviour
             audioManager.PlaySFX(audioManager.WebShoot_01);
             webShooter.Shoot();
         }
-    }
-
-    void shootWeb()
-    {
-        Instantiate(webShootProjectile, transform.position, webShootProjectile.transform.rotation);
     }
     #endregion
 

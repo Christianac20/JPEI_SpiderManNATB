@@ -35,9 +35,11 @@ public class BoxHealth : MonoBehaviour
         if (currentHealth <= 0.0f)
         {
             animator.SetTrigger("Death");
+            GameObject myMedkit = Instantiate(medkitPrefab, spawnLocation.position, Quaternion.identity) as GameObject;
             yield return new WaitForSeconds(1.0f);
-            GameObject myMedkit = Instantiate(medkitPrefab,spawnLocation.position, Quaternion.identity) as GameObject;
-            yield return new WaitForSeconds(0.5f);
+            
+            /*Debug.Log("Botiquin Drop");
+            yield return new WaitForSeconds(0.5f);*/
             Destroy(gameObject);
         }
     }
