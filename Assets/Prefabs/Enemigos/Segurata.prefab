@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4684425620712948203}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 9014499785929502862}
   - component: {fileID: 5667320399348388285}
   - component: {fileID: 2173365687829872272}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Segurata
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2470541961720069278}
   - component: {fileID: 5031023370023462693}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HurtBox
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3259031316663107909}
   - component: {fileID: 6620349070839468171}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -377,7 +377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8435050831423589717}
   - component: {fileID: 3095604755649461121}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: ShootingArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
