@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public UnityEvent OnPlayerDeath;
     public PlayerAttack playerAttack;
     public PlayerController playerController;
+    public HealthBarUI healthBarUI;
     public Animator animator;
     public GameObject deathCanvas;
 
@@ -49,8 +50,6 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        Debug.Log($"Jugador recibió {damage} de daño. Vida actual: {currentHealth}");
 
         OnHealthChanged?.Invoke(currentHealth);
 

@@ -359,6 +359,7 @@ MonoBehaviour:
       m_Calls: []
   playerAttack: {fileID: 2245749154834590195}
   playerController: {fileID: 6284767722486724865}
+  healthBarUI: {fileID: 0}
   animator: {fileID: 5350304032071115773}
   deathCanvas: {fileID: 0}
 --- !u!1 &1747044345943308680

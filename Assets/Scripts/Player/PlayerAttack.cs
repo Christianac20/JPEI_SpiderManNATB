@@ -46,8 +46,8 @@ public class PlayerAttack : MonoBehaviour
     {
         if (isAttacking == true || collision.CompareTag("Enemy") || collision.CompareTag("Destructible"))
         {
-                //collision.SendMessageUpwards("AddDamage");
-                collision.SendMessageUpwards("TakeDamage"); 
+            //collision.SendMessageUpwards("AddDamage");
+            collision.SendMessageUpwards("TakeDamage"); 
         }
     }
 

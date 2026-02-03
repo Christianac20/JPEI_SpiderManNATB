@@ -88,7 +88,6 @@ public class EnemyPatrol : MonoBehaviour
 	{
 		if (_isAttacking == false && collision.CompareTag("Player")) {
 			StartCoroutine("AimAndShoot");
-			Debug.Log("Corrutina AimAndShoot llamada");
 		}
 	}
 
