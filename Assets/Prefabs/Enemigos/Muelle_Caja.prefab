@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 733754364879848560}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.13, y: -0.61, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -308,7 +308,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023981154, y: -0.0675202}
+  m_Offset: {x: -0.023981154, y: -0.14143884}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -319,7 +319,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4917482, y: 1.0497242}
+  m_Size: {x: 1.4917482, y: 1.1976616}
   m_EdgeRadius: 0
 --- !u!50 &1851240428242790677
 Rigidbody2D:
@@ -365,7 +365,7 @@ MonoBehaviour:
   playerAttack: {fileID: 0}
   animator: {fileID: 708983493611968991}
   doThisDamage: 0
-  medkitPrefab: {fileID: 0}
+  medkitPrefab: {fileID: 6051545812227534510, guid: 60f3e499837cd3c48ae8279e745177da, type: 3}
   spawnLocation: {fileID: 5854207543457967994}
 --- !u!95 &708983493611968991
 Animator:

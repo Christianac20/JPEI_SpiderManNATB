@@ -30,15 +30,11 @@ public class EnemyHealth : MonoBehaviour
 
     IEnumerator TakeDamageCorroutine()
     {
-        Debug.Log("TakeDamage solicitado");
-
         currentHealth -= doThisDamage;
-        Debug.Log("doThisDamage es " + doThisDamage);
 
         if (currentHealth <= 0.0f)
         {
             enemyPatrol.enabled = false;
-            Debug.Log("enemyPatrol.enabled = false solicitado");
             animator.SetTrigger("Death");
             yield return new WaitForSeconds(1.0f);
             Destroy(gameObject);

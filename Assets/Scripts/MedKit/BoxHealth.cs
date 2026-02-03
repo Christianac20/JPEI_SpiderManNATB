@@ -12,6 +12,9 @@ public class BoxHealth : MonoBehaviour
     public GameObject medkitPrefab;
     public Transform spawnLocation;
 
+    [Range(0f, 1f)]
+    public float baseDropChance = 0.25f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,7 @@ public class BoxHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
     }
 
     public void TakeDamage()
@@ -28,16 +32,18 @@ public class BoxHealth : MonoBehaviour
         StartCoroutine("TakeDamageCorroutine");
     }
 
-    IEnumerator TakeDamageCorroutine()
+    public IEnumerator TakeDamageCorroutine()
     {
         currentHealth -= playerAttack.damageDone;
 
         if (currentHealth <= 0.0f)
         {
             animator.SetTrigger("Death");
-            yield return new WaitForSeconds(1.0f);
-            GameObject myMedkit = Instantiate(medkitPrefab,spawnLocation.position, Quaternion.identity) as GameObject;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1.5f);
+            if (Random.value <= baseDropChance)
+            {
+                GameObject myMedkit = Instantiate(medkitPrefab, spawnLocation.position, Quaternion.identity) as GameObject;
+            }  
             Destroy(gameObject);
         }
     }

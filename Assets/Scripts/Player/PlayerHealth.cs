@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public UnityEvent OnPlayerDeath;
     public PlayerAttack playerAttack;
     public PlayerController playerController;
+    public HealthBarUI healthBarUI;
     public Animator animator;
     public GameObject deathCanvas;
 
@@ -30,6 +31,14 @@ public class PlayerHealth : MonoBehaviour
         OnHealthChanged?.Invoke(currentHealth);
     }
 
+    private void Update()
+    {
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         // Validación extra
@@ -41,8 +50,6 @@ public class PlayerHealth : MonoBehaviour
 
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-
-        Debug.Log($"Jugador recibió {damage} de daño. Vida actual: {currentHealth}");
 
         OnHealthChanged?.Invoke(currentHealth);
 
