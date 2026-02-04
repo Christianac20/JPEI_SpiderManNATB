@@ -16,7 +16,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip Kick_01;
     public AudioClip Purificator_01;
     public AudioClip WebShoot_01;
-    
+    public AudioClip DieEnemy_01;
+    public AudioClip Boom;
+    public AudioClip Hit;
+    public AudioClip Heal_01;
 
     public void PlaySFX(AudioClip clip)
     {

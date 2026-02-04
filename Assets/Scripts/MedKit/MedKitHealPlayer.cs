@@ -6,6 +6,7 @@ public class MedKitHealPlayer : MonoBehaviour
 {
     public PlayerHealth playerHealth;
     public int healthToHeal;
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +15,9 @@ public class MedKitHealPlayer : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        audioManager = FindAnyObjectByType<AudioManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +26,7 @@ public class MedKitHealPlayer : MonoBehaviour
         {
             playerHealth.currentHealth += healthToHeal;
             Destroy(this.gameObject);
+            audioManager.PlaySFX(audioManager.Heal_01);
         }
     }
 }

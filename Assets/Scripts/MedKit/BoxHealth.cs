@@ -11,6 +11,7 @@ public class BoxHealth : MonoBehaviour
     public float doThisDamage;
     public GameObject medkitPrefab;
     public Transform spawnLocation;
+    public AudioManager audioManager;
 
     [Range(0f, 1f)]
     public float baseDropChance = 0.25f;
@@ -43,6 +44,7 @@ public class BoxHealth : MonoBehaviour
             if (Random.value <= baseDropChance)
             {
                 GameObject myMedkit = Instantiate(medkitPrefab, spawnLocation.position, Quaternion.identity) as GameObject;
+                audioManager.PlaySFX(audioManager.Hit);
             }  
             Destroy(gameObject);
         }

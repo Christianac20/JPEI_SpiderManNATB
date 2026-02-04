@@ -192,6 +192,7 @@ MonoBehaviour:
   initialColor: {r: 1, g: 1, b: 1, a: 1}
   finalColor: {r: 1, g: 0, b: 0, a: 1}
   explosion: {fileID: 7276573951807896386}
+  audioManager: {fileID: 1152158113432525013, guid: bbb51642368017644b974f5aa2d2f2e4, type: 3}
 --- !u!1 &1618574099835413687
 GameObject:
   m_ObjectHideFlags: 0

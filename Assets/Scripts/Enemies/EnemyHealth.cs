@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+
     public float maxHealth = 10.0f;
     public float currentHealth;
     public PlayerAttack playerAttack;
     public Animator animator;
     public EnemyPatrol enemyPatrol;
+
     public float doThisDamage;
+
+    public AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +40,7 @@ public class EnemyHealth : MonoBehaviour
         {
             enemyPatrol.enabled = false;
             animator.SetTrigger("Death");
+            audioManager.PlaySFX(audioManager.DieEnemy_01);
             yield return new WaitForSeconds(1.0f);
             Destroy(gameObject);
         }

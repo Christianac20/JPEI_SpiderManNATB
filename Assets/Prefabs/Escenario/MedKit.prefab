@@ -102,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   healthToHeal: 3
+  audioManager: {fileID: 1152158113432525013, guid: bbb51642368017644b974f5aa2d2f2e4, type: 3}
 --- !u!61 &2925217362896318739
 BoxCollider2D:
   m_ObjectHideFlags: 0

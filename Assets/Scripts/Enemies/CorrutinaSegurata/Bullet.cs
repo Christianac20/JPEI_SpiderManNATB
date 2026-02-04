@@ -19,9 +19,11 @@ public class Bullet : MonoBehaviour
 	private float _startingTime;
 	private bool _returning;
 
+	public AudioManager audioManager;
 	void Awake()
 	{
-		_renderer = GetComponent<SpriteRenderer>();
+        audioManager = FindAnyObjectByType<AudioManager>();
+        _renderer = GetComponent<SpriteRenderer>();
 		_rigidbody = GetComponent<Rigidbody2D>();
 	}
 
@@ -83,8 +85,9 @@ public class Bullet : MonoBehaviour
 
 		if (explosion) {
 			explosion.SetActive(true);
-		}
-
-		Destroy(gameObject, 0.5f);
+            audioManager.PlaySFX(audioManager.Boom);
+        }
+        
+        Destroy(gameObject, 0.5f);
 	}
 }
