@@ -44,7 +44,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.438
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -311,3 +311,7 @@ MonoBehaviour:
   Kick_01: {fileID: 8300000, guid: 98c968c9cf33762478e6e244ee2d06d5, type: 3}
   Purificator_01: {fileID: 8300000, guid: 552b6f93b358bd9419927e66b8dfe842, type: 3}
   WebShoot_01: {fileID: 8300000, guid: 5f35ff2d31e42b5409e65ba9f600f0c0, type: 3}
+  DieEnemy_01: {fileID: 8300000, guid: da49244473402814785c2c0f58ea6d44, type: 3}
+  Boom: {fileID: 8300000, guid: 52afaa96e4c7a4b40822e2446513a53b, type: 3}
+  Hit: {fileID: 8300000, guid: adf892120ee79ef45a118f83b8fa5025, type: 3}
+  Heal_01: {fileID: 8300000, guid: de96050d7ad737a45b2e60a23299fec1, type: 3}
