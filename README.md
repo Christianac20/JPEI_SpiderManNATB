@@ -15,4 +15,4 @@ Spiderman ya vuelve a tener ammo del Webshooter! Por fin puede usarlo.
 ## Funcionalidades nuevas (tras el tag Entrega)
 
 Las Cajas ahora dropean vida! Ya no se juega en modo hardcore se podría decir.
-Más y mejores sonidos.
+Más y mejores sonidos, incluyendo destruccion de caja, explosion de granada, curarse y acabar con un enemigo. 
