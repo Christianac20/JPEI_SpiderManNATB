@@ -2473,6 +2473,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1605362981}
     m_Modifications:
+    - target: {fileID: 2558688669759285734, guid: c43a2acdbd2ec1c48ae66442f8e00a74, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5258411798632434785, guid: c43a2acdbd2ec1c48ae66442f8e00a74, type: 3}
       propertyPath: audioManager
       value: 
@@ -3818,7 +3822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2332485593417445841, guid: 60718889fbaf66c49b05e1657a2e2b21, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.0577297
+      value: -5.0613003
       objectReference: {fileID: 0}
     - target: {fileID: 2332485593417445841, guid: 60718889fbaf66c49b05e1657a2e2b21, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8580,7 +8584,7 @@ PrefabInstance:
       objectReference: {fileID: 480793894}
     - target: {fileID: 5765957712652564684, guid: 4215a6353e3277e43934f357d809139f, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5877462992826600834, guid: 4215a6353e3277e43934f357d809139f, type: 3}
       propertyPath: m_LocalPosition.x
