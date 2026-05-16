@@ -20,4 +20,4 @@ Más y mejores sonidos, incluyendo destruccion de caja, explosion de granada, cu
 
 ## Bugfixes
 
-Tecla D no es un ataque. Sprite sustituido en el tutorial por el correcto de la X.
+La tecla D no es un ataque, solo es de movimiento. Sprite sustituido en el tutorial por el correcto de la X.
