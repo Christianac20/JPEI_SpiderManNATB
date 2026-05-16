@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
         AnimationTagCheck();
         Jump();
         Run();
+        CheckRunning();
         #endregion
 
         #region ANIMATOR VARIABLES SET
@@ -108,11 +109,21 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             xSpeedMultiplier = 2f;
-            isRunning = true;
         }
         else
         {
             xSpeedMultiplier = 1.0f;
+        }
+    }
+
+    void CheckRunning()
+    {
+        if (horizontalInput != 0 && Input.GetKey(KeyCode.LeftShift))
+        {
+            isRunning = true;
+        }
+        else if (horizontalInput == 0 && Input.GetKey(KeyCode.LeftShift))
+        {
             isRunning = false;
         }
     }
