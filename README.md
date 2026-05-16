@@ -23,3 +23,4 @@ Más y mejores sonidos, incluyendo destruccion de caja, explosion de granada, cu
 La tecla D no es un ataque, solo es de movimiento. Sprite sustituido en el tutorial por el correcto de la X.
 El medkit se renderizaba por detrás de los contendores. Ya se debería renderizar por delante.
 El boton de salir del LVL 1 no funcionaba. Ahora lleva al manú principal. Añadido botón de salir en el menú principal para cerrar el juego.
+La barra espaciadora no hacía que el player saltase. Ya funciona correctamente de forma que al pulsar la barra espaciadora en el teclado, el player salta.
