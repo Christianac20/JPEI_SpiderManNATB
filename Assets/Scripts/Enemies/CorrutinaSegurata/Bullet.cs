@@ -55,8 +55,8 @@ public class Bullet : MonoBehaviour
 		_rigidbody.velocity = movement;
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
+	private void OnTriggerEnter2D(Collider2D collision) 
+    {
 		if (_returning == false && collision.CompareTag("Player")) 
 		{
 			// Tell player to get hurt
@@ -69,7 +69,12 @@ public class Bullet : MonoBehaviour
 			collision.SendMessageUpwards("AddDamage");
 			Explode();
 		}
-	}
+
+        if (collision.gameObject.CompareTag("Ground") || collision.CompareTag("Destructible"))
+        {
+            Destroy(gameObject, 0.2f);
+        }
+    }
 
 	public void AddDamage()
 	{
