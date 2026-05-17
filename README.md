@@ -27,3 +27,4 @@ La barra espaciadora no hacía que el player saltase. Ya funciona correctamente 
 Cuando el player terminaba de moverse corriendo, y si no soltaba la tecla de correr pero si la de moverse, se reproducía la animación de correr en vez de la de idle. Ahora se reproduce adecuadamente la de idle si está quieto, aún si pulsa la tecla de correr.
 Las telarañas del player atravesaban contenedores. Arreglado
 Las granadas de los enemigos atravesaban contenedores y cajas destruibles por el player. Arreglado y ya no lo hacen
+Scroll del menu de ajustes es muy lento. Scroll con mayor velocidad añadido en todas las pantallas.
