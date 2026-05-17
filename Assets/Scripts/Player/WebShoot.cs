@@ -84,8 +84,12 @@ public class WebShoot : MonoBehaviour
                 collision.SendMessageUpwards("TakeDamage");
             }
         }
-    }
 
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            Explode();
+        }
+    }
     public void AddDamage()
 	{
 		_returning = true;
@@ -98,6 +102,6 @@ public class WebShoot : MonoBehaviour
 
 		_renderer.enabled = false;
 
-		Destroy(gameObject, 0.5f);
+		Destroy(this.gameObject, 0.5f);
 	}
 }
