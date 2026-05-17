@@ -26,3 +26,4 @@ El boton de salir del LVL 1 no funcionaba. Ahora lleva al manú principal. Añad
 La barra espaciadora no hacía que el player saltase. Ya funciona correctamente de forma que al pulsar la barra espaciadora en el teclado, el player salta.
 Cuando el player terminaba de moverse corriendo, y si no soltaba la tecla de correr pero si la de moverse, se reproducía la animación de correr en vez de la de idle. Ahora se reproduce adecuadamente la de idle si está quieto, aún si pulsa la tecla de correr.
 Las telarañas del player atravesaban contenedores. Arreglado
+Las granadas de los enemigos atravesaban contenedores y cajas destruibles por el player. Arreglado y ya no lo hacen
