@@ -29,3 +29,5 @@ Las telarañas del player atravesaban contenedores. Arreglado
 Las granadas de los enemigos atravesaban contenedores y cajas destruibles por el player. Arreglado y ya no lo hacen
 Scroll del menu de ajustes es muy lento. Scroll con mayor velocidad añadido en todas las pantallas.
 
+Bug de levitar al tocar el borde de una caja.
+
