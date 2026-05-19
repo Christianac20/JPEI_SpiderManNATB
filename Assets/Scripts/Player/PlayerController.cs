@@ -97,6 +97,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded == true && isAttacking == false)
         {
+            isGrounded = false;
             rigidbodyPlayer.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             animator.SetBool("IsGrounded", false);
             audioManager.PlaySFX(audioManager.Jump_01);
@@ -156,14 +157,6 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
         {
             isGrounded = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == ("Ground") || collision.gameObject.tag == ("Destructible"))
-        {
-            isGrounded = false;
         }
     }
     #endregion 
