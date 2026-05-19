@@ -3943,7 +3943,7 @@ GameObject:
   - component: {fileID: 802430849}
   m_Layer: 3
   m_Name: LeftLimit
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
