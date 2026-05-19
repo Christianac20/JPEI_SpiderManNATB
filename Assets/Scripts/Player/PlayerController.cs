@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     #region VARIABLES
     // Variables Float
     [Header("Variables Float")]
-    float horizontalInput;
+    [SerializeField] float horizontalInput;
     public float xSpeedMultiplier = 1.0f;
     public float xSpeed = 3;
     public float jumpForce = 3;
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
 
     #region METODOS MODIFICADORES DEL MOVIMIENTO
 
-    //Corregimos la orientación del player
+    //Corregimos la orientaciï¿½n del player
     private void Flip()
     {
         _facingRight = !_facingRight;
@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Nos aseguramos de que este pulsando o no el botón de correr
+    // Nos aseguramos de que este pulsando o no el botï¿½n de correr
     private void Run()
     {
         if (Input.GetKey(KeyCode.LeftShift))
@@ -118,17 +118,24 @@ public class PlayerController : MonoBehaviour
 
     void CheckRunning()
     {
-        if (horizontalInput != 0 && Input.GetKey(KeyCode.LeftShift))
+        if (horizontalInput != 0)
         {
-            isRunning = true;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                isRunning = true;
+            }
+            else
+            {
+                isRunning = false;
+            }
         }
-        else if (horizontalInput == 0 && Input.GetKey(KeyCode.LeftShift))
+        else
         {
             isRunning = false;
         }
     }
-    
-    // Comprobacion de si está atacando
+
+    // Comprobacion de si estï¿½ atacando
     private void AnimationTagCheck()
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
