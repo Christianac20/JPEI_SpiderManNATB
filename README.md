@@ -24,7 +24,8 @@ La tecla D no es un ataque, solo es de movimiento. Sprite sustituido en el tutor
 El medkit se renderizaba por detrás de los contendores. Ya se debería renderizar por delante.
 El boton de salir del LVL 1 no funcionaba. Ahora lleva al manú principal. Añadido botón de salir en el menú principal para cerrar el juego.
 La barra espaciadora no hacía que el player saltase. Ya funciona correctamente de forma que al pulsar la barra espaciadora en el teclado, el player salta.
-Cuando el player terminaba de moverse corriendo, y si no soltaba la tecla de correr pero si la de moverse, se reproducía la animación de correr en vez de la de idle. Ahora se reproduce adecuadamente la de idle si está quieto, aún si pulsa la tecla de correr.
+Cuando el player terminaba de moverse corriendo, y si no soltaba la tecla de correr pero si la de moverse, se reproducía la animación de correr en vez de la de idle. Ahora se reproduce adecuadamente la de idle si está quieto, aún si pulsa la tecla de correr. Tampoco corre si la suelta y sigue andando.
 Las telarañas del player atravesaban contenedores. Arreglado
 Las granadas de los enemigos atravesaban contenedores y cajas destruibles por el player. Arreglado y ya no lo hacen
 Scroll del menu de ajustes es muy lento. Scroll con mayor velocidad añadido en todas las pantallas.
+
